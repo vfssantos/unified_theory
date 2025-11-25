@@ -64,16 +64,56 @@ The irrationality of $\varphi$ is essential. If the projection angle were ration
 
 ### 4.3.1 The 8×4 Projection to Physical Space
 
-Following the Elser-Sloane construction, the projection from $\mathbb{R}^8$ to $\mathbb{R}^4$ (physical H₄ space) can be represented by a $4 \times 8$ matrix $P_\varphi$. One explicit realization is:
+Following the Elser-Sloane construction, the projection from $\mathbb{R}^8$ to $\mathbb{R}^4$ (physical H₄ space) requires a carefully chosen 4D subspace. The **Moxness golden subspace** is spanned by four 8-vectors:
 
-$$P_\varphi = \frac{1}{\sqrt{2+\varphi}} \begin{pmatrix}
-1 & \varphi & 0 & 0 & \varphi & -1 & 1 & 0 \\
-\varphi & -1 & 1 & \varphi & 0 & 0 & 0 & -1 \\
-0 & 0 & \varphi & -1 & 1 & \varphi & -\varphi & -1 \\
-\varphi & 0 & 1 & 0 & -1 & 0 & \varphi & 1
-\end{pmatrix}$$
+$$\begin{aligned}
+\mathbf{e}_1 &= (1, \varphi, 0, -1, \varphi, 0, 0, 0) \\
+\mathbf{e}_2 &= (\varphi, 0, 1, \varphi, 0, -1, 0, 0) \\
+\mathbf{e}_3 &= (0, 1, \varphi, 0, -1, \varphi, 0, 0) \\
+\mathbf{e}_4 &= (0, 0, 0, 0, 0, 0, \varphi^2, \varphi^{-1})
+\end{aligned}$$
 
 where $\varphi = (1+\sqrt{5})/2 \approx 1.618$.
+
+**Critical step**: These vectors must be **orthonormalized** (via QR decomposition) to produce the projection matrix $P_\varphi$ with orthonormal rows. Let $M$ be the $4 \times 8$ matrix with rows $\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3, \mathbf{e}_4$. The orthonormal projection is:
+
+$$P_\varphi = Q \quad \text{where } M^\top = QR$$
+
+> **Verification (performed numerically):**
+> - With this projection, the 240 E₈ roots project to **exactly two radii**
+> - $R_{\text{inner}} \approx 0.7435$, $R_{\text{outer}} \approx 1.2030$
+> - $R_{\text{outer}} / R_{\text{inner}} = \varphi$ to machine precision
+> - Each shell contains exactly 120 points forming a 600-cell
+
+### 4.3.2 The Standard-Form Projection Matrix
+
+To obtain the canonical 600-cell height spectrum $h \in \{0, \pm\varphi^{-1}, \pm 1, \pm\varphi, \pm 2\}$, we apply a 4D rotation $R \in SO(4)$ to align the first coordinate with the vertex-first axis:
+
+$$R = \begin{pmatrix}
+-0.309017 & -0.809017 & -0.500000 & 0 \\
+0.951057 & -0.262866 & -0.162460 & 0 \\
+0 & -0.525731 & 0.850651 & 0 \\
+0 & 0 & 0 & 1
+\end{pmatrix}$$
+
+The combined **standard projector** $P_{\text{std}} = R \cdot P_\varphi$ is:
+
+$$P_{\text{std}} = \begin{pmatrix}
+-0.3717 & 0.3717 & 0 & -0.6015 & 0 & 0.6015 & 0 & 0 \\
+-0.5117 & -0.5117 & 0 & 0.1954 & -0.6325 & 0.1954 & 0 & 0 \\
+-0.3162 & -0.3162 & -0.7071 & -0.3162 & 0.3162 & -0.3162 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & -0.9732 & -0.2298
+\end{pmatrix}$$
+
+For any E₈ root $\alpha$, the **height** in the 600-cell is:
+
+$$h(\alpha) = \frac{2 \cdot (P_{\text{std}} \cdot \alpha)_1}{R_{\text{inner}}}$$
+
+where $R_{\text{inner}} \approx 0.7435$.
+
+<!-- NOTE: The previous matrix was incorrect. The rows were not orthonormal
+and produced 120 distinct radii instead of 2. The Moxness basis above,
+after orthonormalization, gives the correct golden projection. -->
 
 ### 4.3.2 The Golden Rotation
 

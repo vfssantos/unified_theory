@@ -63,6 +63,8 @@ The heights arise from the three vertex types:
 
 **Total**: $1 + 12 + 20 + 12 + 30 + 12 + 20 + 12 + 1 = 120$ ✓
 
+> **Verification (2025-11-25):** This multiplicity table has been numerically verified by projecting all 240 E₈ roots through the Moxness golden projection (§4.3.1) with the standard rotation (§4.3.2). The inner 600-cell heights match exactly: {0, ±φ⁻¹, ±1, ±φ, ±2} with the counts above.
+
 ---
 
 ## 6.3 Perpendicular Radii

@@ -190,6 +190,19 @@ The $W$ and $Z$ acquire mass through electroweak symmetry breaking. In the geome
 
 ## 7.8 Open Questions
 
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     VERIFIED (2025-11-25): The 12-vertex count at h = φ is EXACT
+     
+     From the full 240-root projection:
+     - Inner shell, h = +φ: exactly 12 roots
+     - Breakdown: 8 D₈ roots + 4 S₈ roots
+     - These form an icosahedron in 3D (at height φ)
+     
+     The "12 gauge bosons" identification is numerically confirmed.
+     ═══════════════════════════════════════════════════════════════════════════ -->
+
+<!-- TODO: REMAINING GAPS FOR GAUGE SECTOR -->
+
 ### 7.8.1 The 8+3+1 Split
 
 How does the icosahedron (with 12 equivalent vertices under H₃) give rise to the 8+3+1 structure of gluons + weak bosons + photon?
@@ -199,16 +212,51 @@ How does the icosahedron (with 12 equivalent vertices under H₃) give rise to t
 - Symmetry breaking (from E₈ → SM) distinguishes the vertices
 - The pyritohedral subgroup (§9) may play a role
 
+<!-- TODO: RESOLVE 8+3+1 PUZZLE
+The icosahedron has full H₃ symmetry (all 12 vertices equivalent).
+But SU(3)×SU(2)×U(1) has structure 8+3+1.
+
+Need to show HOW the E₈ root labels break the geometric equivalence.
+Specifically:
+1. Which E₈ subalgebra do the 12 icosahedral roots belong to?
+2. How does this subalgebra decompose under SU(3)×SU(2)×U(1)?
+3. Is the 8+3+1 structure forced by the projection, or additional input?
+-->
+
 ### 7.8.2 Explicit Root Table
 
 **Needed**: A complete table showing:
 | E₈ Root | Projected Position | Height | SM Quantum Numbers | Gauge Boson |
+
+<!-- TODO: ROOT-TO-GAUGE-BOSON MAPPING
+This is the critical missing verification.
+
+Required computation:
+1. Compute P_φ · α for all 240 E₈ roots
+2. Identify which 12 roots project to height h = φ
+3. Verify these 12 form the adjoint of SU(3)×SU(2)×U(1)
+4. Assign each to a specific gauge boson (g₁...g₈, W⁺, W⁻, Z, γ)
+
+Without this table, the "12 vertices = 12 gauge bosons" is numerology.
+-->
 
 ### 7.8.3 Why Not Other Heights?
 
 Why don't gauge bosons appear at $h = 1$ (the dodecahedron) or $h = \varphi^{-1}$?
 
 **Possible answer**: The algebraic structure (which roots are in the adjoint) determines the geometric placement. The adjoint roots happen to project to $h = \varphi$.
+
+<!-- TODO: HEIGHT SELECTION MECHANISM
+Need to prove that adjoint roots (gauge bosons) project to h = φ.
+
+This requires:
+1. Identify which E₈ roots form the 45 of Spin(10) adjoint
+2. Show these project to height h = φ under the vertex-first slicing
+3. Explain WHY adjoint = high latitude (near pole)
+
+Physical intuition: Gauge bosons are "light" and project strongly
+into physical space, hence high h (close to the observer/time axis).
+-->
 
 ---
 

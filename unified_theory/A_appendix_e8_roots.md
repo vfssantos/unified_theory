@@ -88,6 +88,21 @@ A choice of 8 **simple roots** (basis for the root system):
 | $\alpha_7$ | $(0, 0, 0, 0, 0, 1, +1, 0)$ |
 | $\alpha_8$ | $\frac{1}{2}(-1, -1, -1, -1, -1, -1, -1, +1)$ |
 
+<!-- TODO: VERIFY SIMPLE ROOT α₇ -->
+<!-- POTENTIAL ERROR: The standard E₈ simple roots in Bourbaki/Humphreys conventions
+typically use:
+  α₇ = (0, 0, 0, 0, 0, 0, 1, -1)   [not (0,0,0,0,0,1,+1,0)]
+
+The root listed here has |α₇|² = 2 ✓ but may not match the standard Dynkin diagram.
+
+Need to verify:
+1. Check against Humphreys "Introduction to Lie Algebras" or Bourbaki
+2. Confirm the Cartan matrix is correct for this choice
+3. Verify the Dynkin diagram connectivity matches
+
+If incorrect, the projection calculations may be affected.
+-->
+
 The first 7 roots span the $D_7$ subsystem; $\alpha_8$ extends it to $E_8$.
 
 ---
