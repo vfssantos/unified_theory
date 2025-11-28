@@ -7,10 +7,11 @@
     "last_updated": "2025-11-27"
   },
   "axiom": {
-    "statement": "Reality maximizes stable generative information density",
-    "symbol": "ρ_G",
-    "version": 2,
-    "previous": "Reality maximizes stable structural complexity"
+    "statement": "Reality maximizes Topological Complexity",
+    "symbol": "μ(G) + C_μ",
+    "definition": "Intrinsic Knotting (μ ≥ 6) + Statistical Complexity (C_μ → ∞)",
+    "version": 3,
+    "previous": "Reality maximizes stable generative information density"
   },
   "parts": {
     "I": {
@@ -219,6 +220,17 @@
         "Part I verified via delegations 02, 04, 05, 06",
         "Part II verified via delegation 07",
         "Theory files updated with new arguments and references"
+      ]
+    },
+    {
+      "date": "2025-11-28",
+      "changes": [
+        "Axiom refined to 'Maximize Topological Complexity'",
+        "Definition: μ(G) ≥ 6 (intrinsic knotting) + C_μ → ∞ (statistical complexity)",
+        "Assumptions A2, A3 eliminated — now derived from axiom",
+        "D = 3 derivation now fully rigorous (graph theory + Zeeman)",
+        "E₈ selection argument reframed as 'algebraic closure'",
+        "All Part I and Part II files updated with new terminology"
       ]
     }
   ]

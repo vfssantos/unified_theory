@@ -6,9 +6,17 @@
 
 ## The Central Claim
 
-> **AXIOM**: Reality maximizes **stable generative information density**.
+> **AXIOM**: Reality maximizes **Topological Complexity**.
 >
 > **MAIN THEOREM**: The unique solution is a 3-dimensional quasicrystal with H₃ symmetry, projected from the E₈ lattice.
+
+**Definition**: Topological Complexity = Intrinsic Knotting ($\mu(G) \geq 6$) + Statistical Complexity ($C_\mu \to \infty$)
+
+**Why this axiom?** See `Part_I_Structure/00_overview.md` for full motivation. In brief:
+- It is measurable (both components are rigorous mathematical quantities)
+- It has predictive power (uniquely selects D=3, H₃, φ, E₈)
+- It is falsifiable (stable knots in D≠3 would refute it)
+- Action principles assume spacetime exists; this axiom selects spacetime's properties
 
 ---
 
@@ -18,7 +26,7 @@
 ╔═══════════════════════════════════════════════════════════════════════════════╗
 ║                    THE GOLDEN SELECTION PRINCIPLE                              ║
 ║                                                                                ║
-║   AXIOM: Reality maximizes stable generative information density               ║
+║   AXIOM: Reality maximizes Topological Complexity (μ ≥ 6 + C_μ → ∞)           ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
                                     │
         ┌───────────────────────────┼───────────────────────────┐
@@ -42,25 +50,25 @@
 ## The Complete Logic Chain
 
 ```
-AXIOM: Reality maximizes stable generative information density
+AXIOM: Reality maximizes Topological Complexity
                 ↓
 PART I: STRUCTURE
                 ↓
-I.A: Generative Density → Aperiodic order (ρ_G maximization)
+I.A: Statistical Complexity (C_μ) → Aperiodic order
                 ↓
-I.B: Stability → D=3 only (The Golden Lock: Hopfion phasons)
+I.B: Intrinsic Knotting (μ ≥ 6) → D=3 exactly (Zeeman)
                 ↓
-I.C: Symmetry → H₃ (maximal non-crystallographic in 3D)
+I.C: Isotropic complexity → H₃ (maximal non-crystallographic in 3D)
                 ↓
 PART II: GEOMETRY
                 ↓
 II.A: Projection → Quasicrystals require higher-D lattice source
                 ↓
-II.B: Parent → H₃ requires H₄ (subgroup relation)
+II.B: Parent → H₃ + φ requires H₄ (algebraic closure)
                 ↓
-II.C: Completion → H₄ requires E₈ (unique minimal lattice)
+II.C: Completion → H₄ requires E₈ (unique in 8D)
                 ↓
-II.D: Eigenvalue → φ emerges from H₃/H₄ algebra
+II.D: Eigenvalue → φ emerges from projection matrix
                 ↓
 PART III: PHYSICS (To be developed)
                 ↓

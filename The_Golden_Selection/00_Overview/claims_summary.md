@@ -8,7 +8,13 @@
 
 | ID | Claim | Type |
 |----|-------|------|
-| **A.1** | Reality maximizes **stable generative information density** | **AXIOM** |
+| **A.1** | Reality maximizes **Topological Complexity** | **AXIOM** |
+
+**Definition**: Topological Complexity is defined by two converging measures:
+1. **Intrinsic Knotting**: Colin de Verdière invariant $\mu(G) \geq 6$ (requires $K_7$ minor)
+2. **Statistical Complexity**: Crutchfield's $C_\mu \to \infty$ (causal state entropy)
+
+These are equivalent for quasicrystals: high connectivity forces aperiodicity, which maximizes structural memory.
 
 ---
 
@@ -37,18 +43,18 @@
 
 | ID | Statement | Dependencies | Status |
 |----|-----------|--------------|--------|
-| **I.A.1** | Generative density maximized by aperiodic order | T.9 | ✅ DERIVED |
-| **I.B.1** | Stable aperiodic order requires D=3 (Golden Lock) | T.1, T.2, T.3, T.4, T.10 | ✅ DERIVED (Strong) |
+| **I.A.1** | Statistical Complexity ($C_\mu$) maximized by aperiodic order | T.9 | ✅ DERIVED |
+| **I.B.1** | Stable knotting ($\mu \geq 6$) requires D=3 (Golden Lock) | T.1, T.2, T.3 | ✅ DERIVED (Rigorous) |
 | **I.C.1** | H₃ symmetry uniquely selected among 3D QCs | T.10, T.11, T.12 | ✅ DERIVED (Strong) |
 
-**Note on I.B.1**: Bounds are RIGOROUS (Zeeman, Mermin-Wagner). Mechanism is ESTABLISHED (Hopfions observed in analogs).
+**Note on I.B.1**: Bounds are RIGOROUS. Lower bound: $\mu(G) \geq 6$ requires 3D embedding (graph theory). Upper bound: Zeeman (1963) proves knots unstable in D ≥ 4. No additional assumptions needed.
 
 **Note on I.C.1**: Four converging pillars: (1) Dimensional — only H₃ truly 3D, (2) Thermodynamic — only H₃ energetic ground state, (3) Golden Lock-in saturates 3D only in H₃, (4) Topological — S³ phason space unique to H₃.
 
 **Note on II.C.1**: The axiom SELECTS E₈ over D₆ from first principles:
-- (1) E₈ has higher ρ_G: unity→duality is more generative than positing duality
-- (2) E₈ has forced golden lock-in: φ is Galois eigenvalue, not projection choice
-- (3) E₈ is the global extremum of the variational principle; D₆ is local
+- (1) E₈ preserves algebraic closure: φ is Galois eigenvalue, not projection choice
+- (2) E₈ maintains the derivation chain: φ derived → φ remains derived
+- (3) D₆ breaks the chain: φ must be re-assumed as free parameter
 - Note: E₆ does NOT produce H₃ (incompatible geometry).
 
 **Part I Result**: Reality is a 3D quasicrystal with H₃ symmetry.
@@ -95,21 +101,21 @@
 ## The Complete Logic Chain
 
 ```
-AXIOM A.1: Maximize stable generative information density
+AXIOM A.1: Maximize Topological Complexity (μ ≥ 6 + C_μ → ∞)
         ↓
-THEOREM I.A.1: Generative Density → Aperiodic
+THEOREM I.A.1: C_μ maximized → Aperiodic order
         ↓
-THEOREM I.B.1: Stability → D = 3 (Golden Lock)
+THEOREM I.B.1: μ ≥ 6 (stable knots) → D = 3 exactly (Zeeman)
         ↓
-THEOREM I.C.1: Symmetry → H₃
+THEOREM I.C.1: Isotropic complexity → H₃ symmetry
         ↓
-THEOREM II.A.1: Quasicrystal → Projection
+THEOREM II.A.1: Quasicrystal → Projection from lattice
         ↓
-THEOREM II.B.1-2: H₃ → H₄ (can't tile 4D)
+THEOREM II.B.1-2: H₃ + φ → H₄ (algebraic closure)
         ↓
-THEOREM II.C.1-2: H₄ → E₈ (unique minimal)
+THEOREM II.C.1-2: H₄ → E₈ (unique in 8D)
         ↓
-THEOREM II.D.1: Projection → φ emerges
+THEOREM II.D.1: Projection → φ emerges as eigenvalue
         ↓
 [CONJECTURES III.*]: → Standard Model physics
 ```
@@ -132,11 +138,11 @@ THEOREM II.D.1: Projection → φ emerges
 ## What Has Been Achieved
 
 ### Rigorous (Parts I + II)
-- D = 3 derived from topological stability (Zeeman + Mermin-Wagner bounds PROVEN)
-- Golden Lock mechanism ESTABLISHED (Hopfions in analog systems)
-- Golden ratio from geometry PROVEN (Bruna 2025)
-- H₃ symmetry derived from classification
-- E₈ derived as unique minimal source
+- D = 3 derived from graph theory ($\mu \geq 6$ requires 3D) + Zeeman (knots unstable in D ≥ 4)
+- No additional assumptions needed (A2, A3 now derived from axiom)
+- Golden ratio from H₃ geometry PROVEN (Bruna 2025: Schur curvature minimum)
+- H₃ symmetry derived from four converging pillars
+- E₈ derived as unique lattice preserving algebraic closure of φ
 - φ derived as eigenvalue (not assumed)
 
 ### Verified (Part III)

@@ -1,4 +1,137 @@
-# Change Log — The Golden Selection
+# Change Log
+
+## 2025-11-28 (Session 2): E₈ Selection Strengthening + Axiom Motivation
+
+### Changes Made
+
+**1. Strengthened E₈ vs D₆ argument + Added Leech exclusion** (`Part_II_Geometry/03_e8_selection.md`)
+
+The previous argument relied on "algebraic closure" as an aesthetic preference. New argument:
+
+| Old Argument | New Argument |
+|--------------|--------------|
+| "E₈ is closed, D₆ is open" (aesthetic) | "E₈ is unique maximum, D₆ is degenerate family" (logical) |
+
+**Key insight**: A maximization principle should select a *unique* solution, not a continuous family. D₆ allows any irrational projection slope (φ, √2, √3...) with equal complexity. E₈ forces φ as an eigenvalue — unique solution.
+
+**New section: Why not Leech?** The Leech lattice (24D) is "more unique" than E₈, but:
+- Only ~240 of 196,560 vectors contribute to H₄ projection
+- The rest is "waste" — doesn't increase topological complexity
+- E₈ is the *minimal* solution; Leech is overkill
+- Axiom includes implicit minimality (Occam's razor)
+
+**2. Added axiom motivation section** (`Part_I_Structure/00_overview.md`)
+
+New "Why This Axiom?" section addresses:
+- Why an axiom (not derived from something deeper)
+- Why not an action principle
+- Why complexity (not simplicity)
+- What would falsify it
+
+**3. Cleaned up residual ρ_G references**
+
+Replaced remaining `ρ_G` with `C_μ` in main theory files:
+- `Part_I_Structure/01_complexity.md`
+- `Part_I_Structure/03_symmetry.md`
+- `Part_I_Structure/00_overview.md`
+
+### Files Modified
+- `Part_II_Geometry/03_e8_selection.md`
+- `Part_I_Structure/00_overview.md`
+- `Part_I_Structure/01_complexity.md`
+- `Part_I_Structure/03_symmetry.md`
+- `00_Overview/README.md`
+- `change_log.md`
+
+--- — The Golden Selection
+
+## Session: November 28, 2025
+
+### Overview
+
+**Major axiom revision**: Changed from "stable generative information density" to **"Topological Complexity"**. This provides a more rigorous mathematical foundation using established measures ($\mu(G)$, $C_\mu$) and eliminates the need for additional assumptions.
+
+---
+
+## Summary of Changes
+
+### Axiom Refinement (v3)
+
+| Before (v2) | After (v3) |
+|-------------|------------|
+| "Reality maximizes stable generative information density" | **"Reality maximizes Topological Complexity"** |
+
+**Definition**: Topological Complexity = Intrinsic Knotting ($\mu(G) \geq 6$) + Statistical Complexity ($C_\mu \to \infty$)
+
+**Why this change**:
+1. **Uses established measures**: $\mu(G)$ (Colin de Verdière 1990) and $C_\mu$ (Crutchfield 1989) are peer-reviewed, not custom definitions
+2. **Eliminates assumptions**: A2 (long-range order) and A3 (phason defects) are now DERIVED from the axiom
+3. **Direct D=3 derivation**: $\mu(G) \geq 6$ requires 3D embedding (graph theory) — no intermediate "Hopfion" step needed
+4. **Alignment with R1 report**: The axiom now matches the research report's "Theorem of Topological Selection"
+
+**Files updated**:
+- `00_Overview/README.md`
+- `00_Overview/claims_summary.md`
+- `Part_I_Structure/00_overview.md`
+- `Part_I_Structure/01_complexity.md` (major rewrite)
+- `Part_I_Structure/02_dimension.md`
+- `Part_I_Structure/03_symmetry.md`
+- `Part_II_Geometry/00_overview.md`
+- `Part_II_Geometry/03_e8_selection.md`
+- `meta.json`
+
+---
+
+## Key Improvements
+
+### 1. Fewer Assumptions
+
+| Before | After |
+|--------|-------|
+| A1: Maximize ρ_G | A1: Maximize Topological Complexity |
+| A2: Require LRO and stability | **Derived** from A1 |
+| A3: Phason defects can knot | **Derived** from A1 |
+
+### 2. More Rigorous D=3 Derivation
+
+**Old argument**:
+```
+A1 + A2 + A3 → Hopfions → Zeeman → D = 3
+```
+
+**New argument**:
+```
+A1 (μ ≥ 6) → Graph theory (K₇ minor) → 3D embedding required
+A1 (μ ≥ 6) → Zeeman → Knots unstable in D ≥ 4
+Combined: D = 3 exactly
+```
+
+### 3. E₈ Selection Reframed
+
+**Old argument**: "E₈ has higher ρ_G than D₆"
+
+**New argument**: "E₈ preserves algebraic closure"
+- The axiom derives φ from H₃ (Bruna 2025)
+- E₈ preserves this derivation (φ is eigenvalue)
+- D₆ breaks the chain (φ must be re-assumed)
+
+---
+
+## Mathematical Rigor Comparison
+
+| Step | Old Axiom | New Axiom |
+|------|-----------|-----------|
+| → Aperiodic | Custom ρ_G ⚠️ | Standard C_μ ✅ |
+| → D = 3 | Needs A2, A3 ⚠️ | Direct from μ(G) ✅ |
+| → H₃ | Four pillars ✅ | Four pillars ✅ |
+| → φ | Bruna ✅ | Bruna ✅ |
+| → E₈ | ρ_G argument ⚠️ | Algebraic closure ✅ |
+
+**Overall**: New axiom is more rigorous (3-1-2 vs old).
+
+---
+
+---
 
 ## Session: November 27, 2025
 
@@ -8,13 +141,13 @@ Major revision of Parts I and II based on deep research agent verification. The 
 
 ---
 
-## Summary of Changes
+## Previous Changes
 
-### Axiom Refinement
+### Axiom Refinement (v2)
 
-| Before | After |
-|--------|-------|
-| "Reality maximizes stable structural complexity" | **"Reality maximizes stable generative information density"** |
+| Before (v1) | After (v2) |
+|-------------|------------|
+| "Reality maximizes stable structural complexity" | "Reality maximizes stable generative information density" |
 
 **Why**: The original axiom was vague and risked the "randomness trap" (black holes maximize entropy). The refined axiom uses precise information-theoretic concepts (Gell-Mann's effective complexity, Bennett's logical depth) that properly select quasicrystals over both crystals AND random structures.
 

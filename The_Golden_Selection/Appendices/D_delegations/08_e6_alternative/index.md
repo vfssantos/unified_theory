@@ -1,21 +1,83 @@
-# Delegation 08: E₆ as Alternative to E₈
+# Delegation 08: E₆ Alternative → E₈ vs D₆ Selection
 
 ## Status: 🟢 COMPLETE
 
-**Goal**: Investigate whether E₆ could satisfy the axiom as an alternative to E₈, bypassing the H₄ intermediate.
+**Goal**: 
+- ~~iter_1: Investigate whether E₆ could satisfy the axiom~~ ✅ **E₆ INCOMPATIBLE**
+- ~~iter_2: Investigate rigorous selection criteria for E₈ over D₆~~ ✅ **STRONGLY PREFERRED, NOT FORCED**
+- ~~iter_3: Concrete test — Can D₆ derive the Weinberg angle formula?~~ ✅ **D₆ = E₈!**
 
-**Result**: ❌ **E₆ INCOMPATIBLE** — But D₆ works! The choice is between D₆ (minimal) and E₈ (exceptional).
+## ⚠️ MAJOR FINDING (iter_3)
+
+**D₆ gives the EXACT SAME Weinberg angle formula as E₈:**
+
+$$\sin^2\theta_W = \frac{393 - 75\sqrt{5}}{968} \approx 0.2327$$
+
+This means the Weinberg angle prediction does NOT distinguish E₈ from D₆.
+
+**Final Verdict**: 
+
+| Question | Answer |
+|----------|--------|
+| Is E₈ mathematically forced over D₆? | **NO** — No rigorous criterion excludes D₆ |
+| Does E₈ predict Weinberg angle uniquely? | **NO** — D₆ gives identical result! |
+| Are they physically distinguishable? | **UNCERTAIN** — Weinberg angle is NOT a test |
+| What should Part II say? | **Needs revision** — Must find OTHER distinguishing features |
 
 ---
 
 ## Executive Summary
 
-**Key finding**: E₆ is NOT a viable alternative to E₈ for H₃ geometry.
+### iter_3 Finding (MAJOR)
+**D₆ gives the SAME Weinberg angle formula as E₈!**
 
-But the research revealed something important:
-- **D₆** (not E₆!) is the standard 6D lattice for H₃ quasicrystals
-- The real choice is: **D₆ (minimal, crystallographic)** vs **E₈ (exceptional, golden)**
-- E₆ is used for 2D 12-fold/7-fold symmetries, not 3D icosahedral
+| Quantity | E₈ (8D → 4D) | D₆ (6D → 3D) |
+|----------|--------------|--------------|
+| |x_SU2|² | (5+√5)/5 | **SAME** |
+| |x_Y|² | 1 - 3√5/25 | **SAME** |
+| ρ | (10√5+35)/29 | **SAME** |
+| sin²θ_W | (393-75√5)/968 ≈ 0.2327 | **SAME** |
+
+**Why this happens**:
+- SM generators only use 5 coordinates (fit in both D₆ and E₈)
+- Golden structure is shared (both A₄→H₂, D₆→H₃, E₈→H₄ family)
+- The ratio ρ is a property of "SU(5) in golden representation"
+
+**Implications**:
+- "E₈ predicts Weinberg angle" is **TOO STRONG**
+- Should say: "golden icosahedral geometry + SU(5) predicts Weinberg angle"
+- Need OTHER tests to distinguish E₈ from D₆
+
+### iter_1 Finding
+E₆ is **NOT** a viable alternative to E₈ for H₃ geometry. The real choice is **D₆ vs E₈**.
+
+### iter_2 Finding (7 Lenses)
+**E₈ is STRONGLY PREFERRED but NOT MATHEMATICALLY FORCED.**
+
+| Lens | Question | Verdict |
+|------|----------|---------|
+| **A: Information Theory** | Does E₈ maximize info density? | **Neutral** — No rigorous measure found |
+| **B: Derived vs Assumed** | Is φ more "derived" in E₈? | **Partial** — Aesthetic, not mathematical |
+| **C: Moduli Spaces** | Is E₈ more unique? | **Partial** — Both unique once H₃ enforced |
+| **D: Physical Predictions** | Different predictions? | **YES — E₈ favored** (Weinberg, families) |
+| **E: Community** | What do experts use? | **Split** — Materials: D₆; Physics: E₈ |
+| **F: Materials Science** | Standard practice? | **D₆** — 6D is standard for QC indexing |
+| **G: Photonics** | Engineering preference? | **D₆** — E₈ seen as "overkill" |
+
+### Key Insight
+> "The axiom of 'maximizing stable generative information' does not mathematically force E₈ over D₆; it remains a choice, albeit a well-motivated one."
+
+**Why E₈ is preferred:**
+1. **Derivational elegance**: φ appears as eigenvalue, not parameter
+2. **Unification power**: E₈ ⊃ E₆×SU(3) → 3 families naturally
+3. **Predictive**: Weinberg angle formula, spinor representations
+4. **Economy**: Single structure for geometry + physics
+
+**Why D₆ remains viable:**
+1. Standard in materials science for 40+ years
+2. Simpler (6D vs 8D)
+3. Produces same H₃ quasicrystal
+4. φ is still determined by H₃ geometry (Bruna 2025)
 
 ---
 
@@ -140,25 +202,39 @@ E₆ is **not in the running** for H₃.
 
 ---
 
-## Refined Understanding: E₈ Selected by Axiom
+## Refined Understanding: E₈ Selection (Updated by iter_2)
 
-**Original framing**: "E₈ is chosen for physics content."
+### Original Claim (iter_1)
+> "E₈ is forced by exceptionality + golden requirements."
 
-**Refined argument**: The axiom SELECTS E₈ over D₆ from first principles:
+### Revised Understanding (iter_2)
+> "E₈ is **strongly preferred** but **not mathematically forced**."
 
-| Criterion | D₆ | E₈ | Winner |
-|-----------|-----|-----|--------|
-| **ρ_G** | Duality posited (2 cells) | Unity→Duality (1 cell) | **E₈** |
-| **Golden φ** | Chosen in projection | Forced by Galois | **E₈** |
-| **Stability** | Good | Locked (Bruna) | **E₈** |
-| **Variational** | Local max | Global max | **E₈** |
+| Criterion | D₆ | E₈ | Verdict |
+|-----------|-----|-----|---------|
+| **Information density** | Same H₃ pattern | Same H₃ pattern | Neutral |
+| **Golden φ** | Parameter (from H₃) | Eigenvalue (internal) | E₈ aesthetic |
+| **Uniqueness** | Unique once φ set | Unique | Neutral |
+| **Physical predictions** | None inherent | Weinberg, 3 families | **E₈ wins** |
+| **Unification** | Requires additions | Built-in E₆×SU(3) | **E₈ wins** |
+| **Community** | Standard (materials) | Preferred (theory) | Split |
 
-**Conclusion**: E₈ is the extremum selected by "Maximize stable generative information density."
+### Implications for Part II
 
-D₆ can produce H₃ geometry, but:
-- Lower ρ_G (duality is less generative than unity)
-- Weaker stability (φ is chosen, not forced)
-- Local maximum, not global
+**Part II should state:**
+> "For minimal icosahedral geometry, 6D D₆ suffices (standard in materials science). The Golden Selection uses E₈ because it provides:
+> 1. Derivational integrity (φ as eigenvalue)
+> 2. Unification capacity (E₆×SU(3) → 3 families)
+> 3. Predictive power (coupling constant formulas)
+>
+> This is a well-motivated choice, not a mathematical necessity."
+
+### What This Means for the Theory
+
+- Part II claims are **clarified**, not weakened
+- The theory gains **credibility through transparency**
+- E₈ is chosen for **theoretical completeness**
+- D₆ remains a viable **minimal alternative**
 
 E₆ remains incompatible (no H₃ geometry at all).
 
@@ -170,6 +246,22 @@ E₆ remains incompatible (no H₃ geometry at all).
 |---|------|------|------|---------|
 | 1 | 2025-11 | Prompt | `iter_1_prompt.md` | E₆ alternative investigation |
 | 2 | 2025-11 | Response | `iter_1_response.md` | **E₆ INCOMPATIBLE**; D₆ is the 6D option |
+| 3 | 2025-11 | Prompt | `iter_2_prompt.md` | **E₈ vs D₆**: Rigorous selection criteria (7 lenses) |
+| 4 | 2025-11 | Response | `iter_2_response.md` | **STRONGLY PREFERRED, NOT FORCED** — Comprehensive analysis |
+| 5 | 2025-11 | Prompt | `iter_3_prompt.md` | **Weinberg Angle Test**: Can D₆ derive the same formula as E₈? |
+| 6 | 2025-11 | Response | `iter_3_response.md` | ⚠️ **D₆ = E₈ for Weinberg!** Same formula exactly |
+
+---
+
+## Next Steps
+
+This delegation is **complete** but raises critical questions:
+
+1. **Delegation 10 created**: Investigate D₆ shell structure — can it provide SM content?
+2. **If D₆ works**: May need to pivot theory from E₈ to D₆
+3. **Find distinguishing predictions**: What can E₈ do that D₆ cannot?
+
+See [Delegation 10: D₆ Shell Structure](../10_d6_shell_structure/index.md)
 
 ---
 

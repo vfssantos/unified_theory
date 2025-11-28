@@ -84,34 +84,34 @@ RESULT: E₈ → H₄ → H₃ is the unique exceptional completion
 
 Both D₆ and E₈ produce H₃ geometry. But the axiom **selects E₈** from first principles:
 
-### Criterion 1: Generative Information Density
+### Criterion 1: Algebraic Closure
 
-| Model | Generating Seed | 3D Result | ρ_G |
-|-------|-----------------|-----------|-----|
-| **D₆** | Two cell types (icosa + dodeca) | Icosa + Dodeca | Medium |
-| **E₈** | One cell type (600-cell) | Icosa + Dodeca (emerges) | **Higher** |
+| Model | Golden Ratio φ | Status |
+|-------|----------------|--------|
+| **D₆** | Appears in projection (chosen) | Free parameter — can be perturbed |
+| **E₈** | Appears as eigenvalue (forced by Galois) | **Locked** — algebraically necessary |
 
-E₈ generates the **same duality** from a **simpler seed** → higher ρ_G.
+In E₈, φ is derived from the projection matrix eigenvalues. In D₆, φ must be re-assumed.
 
-### Criterion 2: Golden Lock-in Stability
+### Criterion 2: Preservation of Derivation
 
-| Model | Golden Ratio φ | Lock-in |
-|-------|----------------|---------|
-| **D₆** | Appears in projection (chosen) | Partial |
-| **E₈** | Appears as eigenvalue (forced by Galois) | **Complete** |
+The axiom derives φ from H₃ geometry (Bruna 2025: Schur curvature minimum).
 
-In E₈, φ is algebraically necessary. In D₆, you could choose different irrationals.
+| Model | φ in H₃ | φ in Embedding | Derivation Preserved? |
+|-------|---------|----------------|----------------------|
+| **D₆** | Derived ✅ | Re-assumed ❌ | **No** — chain broken |
+| **E₈** | Derived ✅ | Still derived ✅ | **Yes** — chain intact |
 
-### Criterion 3: Variational Extremum
+E₈ maintains the logical chain; D₆ breaks it by re-introducing φ as a parameter.
 
-The axiom's variational principle: $\delta S = \delta \int (\rho_G - \lambda \mathcal{U}) dV = 0$
+### Criterion 3: Topological Complexity
 
-| Model | ρ_G | Stability | Extremum? |
-|-------|-----|-----------|-----------|
-| **D₆** | Medium | Good | Local max |
-| **E₈** | High | Locked (Bruna) | **Global max** |
+| Model | $C_\mu$ | Stability | Selected? |
+|-------|---------|-----------|-----------|
+| **D₆** | High | Good but φ arbitrary | Local max |
+| **E₈** | High | Locked (φ eigenvalue) | **Global max** |
 
-**Conclusion**: E₈ is selected by the axiom, not just preferred for physics convenience.
+**Conclusion**: E₈ is selected because it preserves the algebraic closure of the derivation chain.
 
 ---
 

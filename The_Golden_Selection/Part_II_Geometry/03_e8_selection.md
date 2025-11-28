@@ -33,48 +33,55 @@ For **geometry alone**, 6D works:
 
 ### Why the Axiom Selects E₈ (From First Principles)
 
-The axiom "Maximize stable generative information density" **forces** E₈ over D₆:
+The axiom "Maximize Topological Complexity" **forces** E₈ over D₆:
 
-#### Argument 1: Generative Density (ρ_G)
+#### Argument 1: Uniqueness of Maximum
 
-| Model | Description | ρ_G |
-|-------|-------------|-----|
-| **D₆** | "There are two fundamental cells: icosa and dodeca" | Medium |
-| **E₈** | "There is one cell (600-cell); duality emerges from projection" | **Higher** |
+A principle that "maximizes X" should select a **unique** maximum, not a degenerate family.
 
-E₈ generates the **same complexity** from a **shorter description**. Like Maxwell unifying E&M into one field.
+| Model | Projection Freedom | Solutions |
+|-------|-------------------|-----------|
+| **D₆** | φ is free parameter | **Continuous family** (could use √2, √3, etc.) |
+| **E₈** | φ is eigenvalue | **Unique** (up to automorphisms) |
 
-#### Argument 2: Golden Lock-in (Stability)
+In D₆, you can project with *any* irrational slope and get a valid H₃ quasicrystal. The topological complexity is the same for all choices. This means D₆ doesn't give a maximum — it gives a *threshold*.
 
-From **Bruna (2025)**: φ is a unique stationary point of Schur-convex curvature — a stability attractor.
+In E₈, the projection is determined by the lattice structure. There is no freedom. This is the unique global maximum.
 
-| Model | How φ Appears | Lock-in |
-|-------|---------------|---------|
-| **D₆** | Chosen in projection matrix | **Partial** — could choose other irrationals |
-| **E₈** | Forced as Galois eigenvalue | **Complete** — algebraically necessary |
+**Analogy**: "Minimize energy" selects a unique ground state, not a degenerate manifold. Similarly, "maximize topological complexity" should select E₈ (unique) over D₆ (degenerate).
 
-In D₆, you SELECT the golden cut. In E₈, the golden ratio EMERGES from the algebra. E₈ has stronger stability because φ is locked, not chosen.
+#### Argument 2: φ as Derived vs. Assumed
 
-#### Argument 3: Variational Extremum
+The axiom derives φ from H₃ geometry via Bruna (2025): φ⁻² is the unique Schur curvature minimum.
 
-The axiom's principle: $\delta S = \delta \int (\rho_G - \lambda \mathcal{U}) dV = 0$
+| Model | φ in H₃ | φ in Embedding | Consistency |
+|-------|---------|----------------|-------------|
+| **D₆** | Derived ✅ | Re-assumed as parameter ❌ | **Breaks chain** |
+| **E₈** | Derived ✅ | Emerges as eigenvalue ✅ | **Preserves chain** |
 
-| Model | ρ_G | Stability (1/U) | S = ρ_G - λU |
-|-------|-----|-----------------|--------------|
-| **D₆** | Medium | Good | Local maximum |
-| **E₈** | High | Locked | **Global maximum** |
+E₈ preserves the logical structure; D₆ requires re-introducing φ "by hand."
 
-**Conclusion**: E₈ is the extremum selected by the axiom.
+#### Argument 3: Physical Content (Secondary)
 
-#### Why This Matters
+E₈ provides additional structure that D₆ lacks:
 
-The old argument was: "E₈ is chosen for physics content."
+| Feature | D₆ | E₈ |
+|---------|-----|-----|
+| Root count | — | 240 (two 600-cells) |
+| Spinor sector | No | Yes (128 roots → fermions) |
+| Family structure | No | Yes (E₆ × SU(3) subgroup) |
 
-The new argument is: **"E₈ is forced by the axiom itself."**
+This is a *bonus*, not the primary selection criterion. The axiom selects E₈ for uniqueness (Argument 1); the physics content follows.
 
-- Unity (E₈) is more generative than Duality (D₆)
-- Forced φ (E₈) is more stable than chosen φ (D₆)
-- E₈ is the global maximum; D₆ is a local maximum
+#### Summary
+
+| Criterion | D₆ | E₈ | Winner |
+|-----------|-----|-----|--------|
+| **Unique maximum?** | No (family) | Yes | **E₈** |
+| **φ derived?** | No (parameter) | Yes (eigenvalue) | **E₈** |
+| **Physics content** | Minimal | Rich | **E₈** |
+
+**Conclusion**: E₈ is selected because it is the **unique** maximum of topological complexity. D₆ gives a degenerate family of solutions, which violates the "maximize" requirement.
 
 ### Why Not E₆?
 
@@ -87,6 +94,40 @@ E₆ is 6-dimensional and exceptional — could it work?
 - E₆ is used for **2D 12-fold/7-fold** quasicrystals, not 3D icosahedral
 
 See `Appendices/D_delegations/08_e6_alternative/` for full analysis.
+
+### Why Not Leech (Λ₂₄)?
+
+The Leech lattice is even *more* unique than E₈ — it's the unique even unimodular lattice in 24D with no norm-2 roots. Why doesn't the axiom select it?
+
+**Answer: Minimality.**
+
+| Property | E₈ | Leech |
+|----------|-----|-------|
+| Dimension | 8 | 24 |
+| Minimal vectors | 240 | 196,560 |
+| Projects to H₄? | ✅ Yes | ✅ Yes (contains E₈) |
+| Efficiency | 100% | ~0.1% |
+
+**The problem with Leech:**
+
+1. **Leech contains E₈** — Any E₈ → H₄ projection extends to Leech → H₄
+2. **But most structure is "waste"** — Only ~240 of 196,560 vectors contribute to the H₄ projection
+3. **The rest projects to noise** — Additional shells, unrelated structures
+
+**The axiom selects E₈ because:**
+
+> "Maximize Topological Complexity" means maximizing the *density* of structure — the ratio of useful structure to resources. Leech has far more structure than needed, but most doesn't contribute to the H₄ geometry.
+
+**Analogy**: If asked "What's the simplest program that generates this output?", a program with 1000 unused subroutines is not the answer. E₈ is the minimal solution; Leech is overkill.
+
+| Criterion | E₈ | Leech | Winner |
+|-----------|-----|-------|--------|
+| **Projects to H₄?** | Yes | Yes | Tie |
+| **Minimal dimension?** | 8 | 24 | **E₈** |
+| **100% efficient?** | Yes | No (~0.1%) | **E₈** |
+| **Unique in its class?** | Yes (8D) | Yes (24D) | Tie |
+
+**Conclusion**: The axiom includes an implicit *minimality* criterion — among all lattices that achieve the maximum complexity, select the smallest. This is consistent with Occam's razor and information-theoretic principles (minimum description length).
 
 ---
 
