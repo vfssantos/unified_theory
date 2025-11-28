@@ -64,4 +64,3 @@
 1. Await iter_1 response.
 2. Integrate "Time as Computation" into Part VII (Dynamics).
 3. Complete the Pivot to D₆.
-

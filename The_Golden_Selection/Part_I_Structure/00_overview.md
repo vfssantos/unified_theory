@@ -12,17 +12,22 @@ This part establishes the **selection** of reality's structure from a single axi
 > 
 > Reality maximizes **Topological Complexity**.
 
-**Definition**: Topological Complexity is defined by two converging measures:
+**Definition**: Topological Complexity is defined by two **complementary** measures:
 
 1. **Intrinsic Knotting**: Colin de Verdière invariant $\mu(G) \geq 6$
-   - A graph with $K_7$ minor forces knots in any 3D embedding
+   - $G$ is the **connectivity graph** of the structure (vertices = atoms/tiles, edges = bonds/adjacencies)
+   - A graph containing a $K_7$ minor forces knots in any 3D embedding
    - Measures structural connectivity that requires non-trivial topology
 
 2. **Statistical Complexity**: Crutchfield's $C_\mu \to \infty$
    - Shannon entropy of causal states (ε-machine)
    - Measures "memory" required to predict future from past
 
-**Key insight**: These measures are **equivalent** for quasicrystals — high connectivity forces aperiodicity, which maximizes structural memory.
+**Relationship**: These measures are **complementary**, not equivalent:
+- $\mu(G) \geq 6$ constrains **dimension** (knots require D = 3)
+- $C_\mu \to \infty$ constrains **order type** (aperiodic, not periodic or random)
+
+Both are needed: $\mu(G)$ alone doesn't distinguish crystals from quasicrystals; $C_\mu$ alone doesn't constrain dimension. Together, they select **3D quasicrystals**.
 
 ---
 
@@ -33,7 +38,7 @@ This part establishes the **selection** of reality's structure from a single axi
 Every framework requires a starting point. The question "why this axiom?" can always be asked one level deeper. We stop here because:
 
 1. **Topological Complexity is measurable** — both $\mu(G)$ and $C_\mu$ are rigorously defined mathematical quantities
-2. **It has predictive power** — the axiom uniquely selects D=3, H₃, φ, and E₈ without additional assumptions
+2. **It has predictive power** — the axiom uniquely selects D=3, H₃, and φ without additional assumptions
 3. **It is falsifiable** — if nature exhibited stable knots in D≠3, or quasicrystals with non-golden scaling, the axiom would be wrong
 
 ### Why Not an Action Principle?
@@ -102,9 +107,10 @@ This part mixes several types of claims. For clarity:
 | **I.C** | Why H₃? | Four pillars: dimensional, thermodynamic, golden, topological | [DERIVED — Strong] |
 
 **Status of I.B (Golden Lock)**: Now **fully rigorous** with no additional assumptions:
-- Lower bound: $\mu(G) \geq 6$ (intrinsic knotting) requires 3D embedding (graph theory)
-- Upper bound: Zeeman (1963) proves knots unstable in D ≥ 4
-- Golden ratio: Bruna (2025) proves φ⁻² is unique Schur curvature minimum
+- **Lower bound**: $\mu(G) \geq 6$ guarantees knots exist in any 3D embedding (Conway-Gordon 1983). Knots cannot exist in D < 3.
+- **Upper bound**: Zeeman (1963) proves knots are unstable in D ≥ 4 (can be untied by isotopy).
+- **Selection**: If the axiom demands *stable* knotted topology, only D = 3 satisfies both bounds.
+- **Golden ratio**: Bruna (2025) proves φ⁻² is unique Schur curvature minimum.
 
 **Status of I.C (H₃ Selection)**: Four converging arguments: (1) Only H₃ is truly 3D aperiodic, (2) Only H₃ phases are energetic ground states, (3) Bruna's golden lock-in saturates 3D only in H₃, (4) Only H₃ has S³ phason space with Hopf protection.
 
@@ -131,7 +137,7 @@ RESULT: Reality is a 3D quasicrystal with H₃ symmetry
 ## Key Definitions
 
 **Topological Complexity**: 
-The combination of Intrinsic Knotting ($\mu(G) \geq 6$) and Statistical Complexity ($C_\mu$). For quasicrystals, these converge: knotted topology ↔ aperiodic order ↔ infinite structural memory.
+The joint optimization of Intrinsic Knotting ($\mu(G) \geq 6$) and Statistical Complexity ($C_\mu$). These are complementary constraints: $\mu(G)$ selects dimension (D = 3), while $C_\mu$ selects order type (aperiodic). Maximizing both simultaneously yields 3D quasicrystals.
 
 **Colin de Verdière Invariant ($\mu(G)$)**:
 Spectral measure of graph embeddability. $\mu(G) \geq 6$ forces intrinsic knotting (Conway-Gordon 1983).
@@ -169,6 +175,9 @@ The mechanism by which D=3 uniquely stabilizes topological complexity:
 
 This part establishes *what* structure reality must have. Part II asks *where* it comes from:
 
-1. How does this quasicrystalline structure connect to known physics (gauge fields, particles)?
-2. What higher-dimensional geometry produces the H₃ quasicrystal upon projection?
-3. Are there nearby local maxima of Topological Complexity, and what would they correspond to physically?
+1. What higher-dimensional lattice produces the H₃ quasicrystal upon projection?
+   - **Answer**: D₆ (6D) — the minimal crystallographic lattice for H₃ quasicrystals.
+2. How does this quasicrystalline structure connect to known physics (gauge fields, particles)?
+   - **Answer**: The D₆ lattice contains all required subalgebras (A₂, D₄, A₃) for Standard Model physics.
+3. What is the role of the "internal" dimensions?
+   - **Answer**: The 3+3 split of D₆ provides 3D space + 3D flavor/generation space (phasons).

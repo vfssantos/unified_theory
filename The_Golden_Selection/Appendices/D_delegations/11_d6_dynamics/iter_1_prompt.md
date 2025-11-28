@@ -119,4 +119,3 @@ Please structure your response as:
 - [ ] Yes
 - [ ] Plausible but unproven
 - [ ] Unlikely / Fatal flaws
-

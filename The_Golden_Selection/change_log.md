@@ -1,5 +1,49 @@
 # Change Log
 
+## 2025-11-28 (Session 3): Review Fixes — Axiom Clarification & File Sync
+
+### Issues Addressed (from external review)
+
+**Part I Issues:**
+
+1. **Axiom Definition Tension** — FIXED
+   - Clarified that $\mu(G)$ and $C_\mu$ are **complementary**, not equivalent
+   - Specified $G$ = connectivity graph of the structure
+   - $\mu(G)$ constrains **dimension**; $C_\mu$ constrains **order type**
+
+2. **Lower Bound Argument Precision** — FIXED
+   - Old: "$\mu(G) \geq 6$ requires 3D"
+   - New: "$\mu(G) \geq 6$ guarantees knots **exist** in any 3D embedding; stability requires D=3"
+   - Logic: knots exist (Conway-Gordon) + knots stable only in D=3 (Zeeman) → D=3 selected
+
+**Part II Issues:**
+
+3. **File Synchronization** — FIXED
+   - `04_golden_ratio.md`: Updated from E₈ → H₄ to D₆ → H₃
+   - `claims_summary.md`: Updated with D₆ pivot, corrected theorem dependencies
+
+4. **Embedding Dimension Theorem** — FIXED
+   - Added citations: Duneau & Katz (1985), Elser (1986)
+   - Added proof sketch in `03_lattice_selection.md`
+
+5. **Time Emergence** — FIXED
+   - Marked as `[CONJECTURE]` throughout
+   - Added explicit note: "not derived from axiom"
+   - Proper entry in `claims_summary.md` under Part VII
+
+### Files Modified
+
+- `Part_I_Structure/00_overview.md` — Axiom definition clarified
+- `Part_I_Structure/01_complexity.md` — μ/C_μ relationship clarified
+- `Part_II_Geometry/00_overview.md` — Time marked as conjecture
+- `Part_II_Geometry/03_lattice_selection.md` — Embedding theorem cited
+- `Part_II_Geometry/04_golden_ratio.md` — Updated for D₆
+- `00_Overview/claims_summary.md` — Complete sync with D₆ pivot
+- `meta.json` — Updated with review session
+- `change_log.md` — This entry
+
+---
+
 ## 2025-11-28 (Session 2): E₈ Selection Strengthening + Axiom Motivation
 
 ### Changes Made

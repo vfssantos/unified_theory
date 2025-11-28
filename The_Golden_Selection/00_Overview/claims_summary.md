@@ -10,11 +10,14 @@
 |----|-------|------|
 | **A.1** | Reality maximizes **Topological Complexity** | **AXIOM** |
 
-**Definition**: Topological Complexity is defined by two converging measures:
+**Definition**: Topological Complexity is defined by two **complementary** measures:
 1. **Intrinsic Knotting**: Colin de Verdière invariant $\mu(G) \geq 6$ (requires $K_7$ minor)
+   - $G$ = connectivity graph of the structure
+   - Constrains **dimension**: knots require D = 3
 2. **Statistical Complexity**: Crutchfield's $C_\mu \to \infty$ (causal state entropy)
+   - Constrains **order type**: aperiodic, not periodic or random
 
-These are equivalent for quasicrystals: high connectivity forces aperiodicity, which maximizes structural memory.
+These are complementary: $\mu(G)$ selects dimension; $C_\mu$ selects order type. Together they select **3D quasicrystals**.
 
 ---
 
@@ -28,14 +31,12 @@ These are equivalent for quasicrystals: high connectivity forces aperiodicity, w
 | **T.4** | Generalized Peierls: LRO stable in D≥3 | Various | 2020s |
 | **T.5** | Cut-and-project theorem | de Bruijn | 1981 |
 | **T.6** | Crystallographic restriction (5-fold forbidden) | Classical | — |
-| **T.7** | E₈ unique even self-dual in 8D | Classification | — |
-| **T.8** | Elser-Sloane projection | Elser-Sloane | 1987 |
+| **T.7** | Embedding dimension for non-crystallographic groups | Duneau-Katz | 1985 |
+| **T.8** | D₆ → H₃ golden projection | Koca et al. | 2015 |
 | **T.9** | Statistical Complexity theory | Crutchfield | 1989 |
 | **T.10** | Golden ratio from Schur-convexity | Bruna | 2025 |
 | **T.11** | Hume-Rothery pseudogap stability | Various | 1990s |
 | **T.12** | Phason space topology (S³ for i-QC) | Various | — |
-| **T.13** | D₆ point group has H₃ as maximal subgroup | Al-Siyabi et al. | — |
-| **T.14** | W(E₆) has no H₃ reflection subgroup | Douglass-Pfeiffer-Röhrle | — |
 
 ---
 
@@ -47,15 +48,13 @@ These are equivalent for quasicrystals: high connectivity forces aperiodicity, w
 | **I.B.1** | Stable knotting ($\mu \geq 6$) requires D=3 (Golden Lock) | T.1, T.2, T.3 | ✅ DERIVED (Rigorous) |
 | **I.C.1** | H₃ symmetry uniquely selected among 3D QCs | T.10, T.11, T.12 | ✅ DERIVED (Strong) |
 
-**Note on I.B.1**: Bounds are RIGOROUS. Lower bound: $\mu(G) \geq 6$ requires 3D embedding (graph theory). Upper bound: Zeeman (1963) proves knots unstable in D ≥ 4. No additional assumptions needed.
+**Note on I.B.1**: The argument is:
+- $\mu(G) \geq 6$ guarantees knots **exist** in any 3D embedding (Conway-Gordon)
+- Knots **cannot exist** in D < 3 (topology)
+- Knots are **unstable** in D ≥ 4 (Zeeman)
+- Therefore: stable knotted topology requires **exactly** D = 3
 
 **Note on I.C.1**: Four converging pillars: (1) Dimensional — only H₃ truly 3D, (2) Thermodynamic — only H₃ energetic ground state, (3) Golden Lock-in saturates 3D only in H₃, (4) Topological — S³ phason space unique to H₃.
-
-**Note on II.C.1**: The axiom SELECTS E₈ over D₆ from first principles:
-- (1) E₈ preserves algebraic closure: φ is Galois eigenvalue, not projection choice
-- (2) E₈ maintains the derivation chain: φ derived → φ remains derived
-- (3) D₆ breaks the chain: φ must be re-assumed as free parameter
-- Note: E₆ does NOT produce H₃ (incompatible geometry).
 
 **Part I Result**: Reality is a 3D quasicrystal with H₃ symmetry.
 
@@ -66,13 +65,18 @@ These are equivalent for quasicrystals: high connectivity forces aperiodicity, w
 | ID | Statement | Dependencies | Status |
 |----|-----------|--------------|--------|
 | **II.A.1** | Quasicrystals require projection from lattice | T.5 | ✅ THEOREM |
-| **II.B.1** | H₃ requires H₄ as parent | Subgroup relation | ✅ THEOREM |
-| **II.B.2** | H₄ cannot tile 4D | T.6 | ✅ THEOREM |
-| **II.C.1** | E₈ is unique minimal lattice for H₄ | T.7 | ✅ THEOREM |
-| **II.C.2** | E₈ admits H₄-preserving projection | T.8 | ✅ THEOREM |
+| **II.B.1** | H₃ (non-crystallographic) requires 6D embedding | T.6, T.7 | ✅ THEOREM |
+| **II.C.1** | D₆ is minimal lattice with algebraic φ | T.7, T.8 | ✅ THEOREM |
 | **II.D.1** | Golden ratio φ emerges from projection | T.8 | ✅ THEOREM |
 
-**Part II Result**: The geometric chain E₈ → H₄ → H₃ is unique and necessary.
+**Note on II.B.1**: Non-crystallographic point groups in $\mathbb{R}^n$ require embedding dimension $\geq 2n$ for cut-and-project. For H₃ in 3D: $2 \times 3 = 6$.
+
+**Note on II.C.1**: D₆ is selected over:
+- $\mathbb{Z}^6$: Admits H₃ projection but φ is a free parameter
+- E₈ (8D): Produces identical physics but violates minimality (+2 extra dimensions)
+- E₆ (6D): Does NOT admit H₃ projection (incompatible geometry)
+
+**Part II Result**: The geometric chain D₆ → H₃ is minimal and necessary.
 
 ---
 
@@ -96,6 +100,19 @@ These are equivalent for quasicrystals: high connectivity forces aperiodicity, w
 | **III.F.1** | Mirror sector at ~TeV | Speculative | ❓ SPECULATION |
 | **III.G.1** | Dark energy from slice field | Speculative | ❓ SPECULATION |
 
+### ⚠️ CONJECTURE (Part VII: Dynamics)
+
+| ID | Statement | Evidence | Status |
+|----|-----------|----------|--------|
+| **VII.A.1** | Time emerges from computational updates | Delegation 11 | ⚠️ [CONJECTURE] |
+
+**Note on VII.A.1**: The D₆ framework has 3+3 spatial dimensions (physical + internal). Time is conjectured to emerge as the sequence of local update steps (phason flips, Pachner moves) rather than a geometric dimension. This is supported by:
+- Lieb-Robinson bounds provide effective "speed of light" on lattice graphs
+- Quantum walks on lattices reproduce Dirac equation in continuum limit
+- Consistent with causal set and spin foam approaches
+
+**Status**: Plausible but unproven. See `Appendices/D_delegations/11_d6_dynamics/`.
+
 ---
 
 ## The Complete Logic Chain
@@ -111,13 +128,15 @@ THEOREM I.C.1: Isotropic complexity → H₃ symmetry
         ↓
 THEOREM II.A.1: Quasicrystal → Projection from lattice
         ↓
-THEOREM II.B.1-2: H₃ + φ → H₄ (algebraic closure)
+THEOREM II.B.1: H₃ non-crystallographic → 6D embedding required
         ↓
-THEOREM II.C.1-2: H₄ → E₈ (unique in 8D)
+THEOREM II.C.1: Minimal + algebraic φ → D₆ lattice
         ↓
 THEOREM II.D.1: Projection → φ emerges as eigenvalue
         ↓
 [CONJECTURES III.*]: → Standard Model physics
+        ↓
+[CONJECTURE VII.A.1]: → Time as computation
 ```
 
 ---
@@ -127,26 +146,30 @@ THEOREM II.D.1: Projection → φ emerges as eigenvalue
 | Category | Count | Status |
 |----------|-------|--------|
 | Axioms | 1 | Postulated |
-| External Theorems | 9 | Cited |
+| External Theorems | 12 | Cited |
 | Part I Theorems | 3 | ✅ Proven |
-| Part II Theorems | 6 | ✅ Proven |
+| Part II Theorems | 4 | ✅ Proven |
 | **Part III Verified** | **1** | ✅ **Weinberg angle** |
 | Part III Conjectures | 7+ | 🔄 In Progress |
+| Part VII Conjectures | 1 | ⚠️ Time emergence |
 
 ---
 
 ## What Has Been Achieved
 
 ### Rigorous (Parts I + II)
-- D = 3 derived from graph theory ($\mu \geq 6$ requires 3D) + Zeeman (knots unstable in D ≥ 4)
-- No additional assumptions needed (A2, A3 now derived from axiom)
+- D = 3 derived from graph theory ($\mu \geq 6$ guarantees knots) + Zeeman (knots unstable in D ≥ 4)
+- $\mu(G)$ and $C_\mu$ are complementary constraints, not equivalent
 - Golden ratio from H₃ geometry PROVEN (Bruna 2025: Schur curvature minimum)
 - H₃ symmetry derived from four converging pillars
-- E₈ derived as unique lattice preserving algebraic closure of φ
+- D₆ derived as minimal lattice with algebraic φ
 - φ derived as eigenvalue (not assumed)
 
 ### Verified (Part III)
 - ✅ **Weinberg angle**: sin²θ_W = (393-75√5)/968 ≈ 0.2327 (0.6% from experiment)
+
+### Conjectured (Part VII)
+- ⚠️ **Time as computation**: Plausible but requires full derivation of Lorentz invariance
 
 ### Pending (Part III)
 - Gauge group identification
@@ -164,4 +187,4 @@ The theory could be falsified if:
 2. **Phason fields not knotted** in real quasicrystals — Golden Lock fails
 3. **No mirror sector** found at TeV — Weakens theory
 4. **Spacetime fundamentally continuous** — Theory wrong
-
+5. **Lorentz violation detected** at levels inconsistent with discrete dynamics — Time conjecture fails

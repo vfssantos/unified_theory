@@ -2,14 +2,16 @@
   "project": {
     "name": "The Golden Selection",
     "subtitle": "Deriving Reality from a Single Axiom",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "status": "in_progress",
-    "last_updated": "2025-11-27"
+    "last_updated": "2025-11-28"
   },
   "axiom": {
     "statement": "Reality maximizes Topological Complexity",
     "symbol": "μ(G) + C_μ",
     "definition": "Intrinsic Knotting (μ ≥ 6) + Statistical Complexity (C_μ → ∞)",
+    "note": "μ(G) and C_μ are COMPLEMENTARY: μ(G) constrains dimension, C_μ constrains order type",
+    "graph_G": "Connectivity graph of the structure (vertices = atoms/tiles, edges = bonds/adjacencies)",
     "version": 3,
     "previous": "Reality maximizes stable generative information density"
   },
@@ -42,7 +44,7 @@
     },
     "II": {
       "title": "Geometry",
-      "subtitle": "Why E₈?",
+      "subtitle": "Why D₆?",
       "status": "verified",
       "sections": {
         "A": {
@@ -51,15 +53,16 @@
           "status": "known"
         },
         "B": {
-          "title": "H₄ Parent",
+          "title": "H₃ Parent Geometry",
           "theorem": "II.B.1",
           "status": "known"
         },
         "C": {
-          "title": "E₈ Selection",
+          "title": "D₆ Lattice Selection",
           "theorem": "II.C.1",
           "status": "proven",
-          "confidence": "mathematical_necessity"
+          "confidence": "minimal_sufficiency",
+          "note": "D₆ selected over E₈ by minimality; physics predictions identical"
         },
         "D": {
           "title": "Golden Ratio Emergence",
@@ -70,7 +73,7 @@
     },
     "III": {
       "title": "Physics",
-      "subtitle": "Standard Model",
+      "subtitle": "Standard Model from D₆",
       "status": "pending"
     }
   },
@@ -81,7 +84,7 @@
         "topic": "Weinberg Angle",
         "part": "III",
         "status": "complete",
-        "result": "0.6% from experiment"
+        "result": "0.6% from experiment; identical for D₆ and E₈"
       },
       {
         "id": "02",
@@ -115,23 +118,43 @@
         "id": "07",
         "topic": "E₈ Uniqueness",
         "part": "II",
-        "status": "complete",
-        "result": "proven"
+        "status": "superseded",
+        "result": "D₆ selected instead; E₈ is non-minimal"
       },
       {
         "id": "08",
-        "topic": "E₆ Alternative",
+        "topic": "E₆ / D₆ / E₈ Comparison",
         "part": "II",
         "status": "complete",
-        "result": "incompatible"
+        "result": "D₆ selected; E₆ incompatible; E₈ non-minimal"
+      },
+      {
+        "id": "09",
+        "topic": "Why Higher Dimensions?",
+        "part": "II",
+        "status": "complete",
+        "result": "6D physically necessary (phasons)"
+      },
+      {
+        "id": "10",
+        "topic": "D₆ Shell Structure",
+        "part": "II",
+        "status": "complete",
+        "result": "Contains A₂, D₄, A₃ for SM physics"
       }
     ],
     "pending": [
       {
         "id": "03",
-        "topic": "SM Embedding",
+        "topic": "SM Embedding in D₆",
         "part": "III",
         "status": "not_started"
+      },
+      {
+        "id": "11",
+        "topic": "D₆ Dynamics (Computational Time)",
+        "part": "VII",
+        "status": "in_progress"
       }
     ]
   },
@@ -160,22 +183,25 @@
         "topological": "S³ phason space unique to H₃"
       }
     },
-    "e8_uniqueness": {
-      "minimality": "8D forced by Galois conjugation of φ",
-      "uniqueness": "Only E₈ has 240 roots (D₈ has 112)",
-      "spectral": "Only W(E₈) has Coxeter h=30",
-      "status": "proven"
+    "d6_selection": {
+      "minimality": "6D minimal for H₃ projection (2×3=6)",
+      "sufficiency": "Contains A₂, D₄, A₃ subalgebras for all SM predictions",
+      "interpretation": "3D space + 3D internal (flavor/generation)",
+      "status": "selected"
     },
-    "six_d_alternatives": {
-      "d6_works": "D₆ produces H₃ directly (standard QC approach)",
-      "e6_fails": "E₆ has no H₃ reflection subgroup",
-      "choice": "D₆ for minimal geometry; E₈ for exceptional + golden + physics"
+    "e8_vs_d6": {
+      "weinberg_angle": "IDENTICAL",
+      "lepton_koide": "IDENTICAL (A₂ in both)",
+      "quark_predictions": "IDENTICAL (D₄ in both)",
+      "higgs_mass": "IDENTICAL (A₃ in both)",
+      "verdict": "D₆ selected by Occam's Razor"
     },
     "weinberg_angle": {
       "prediction": 0.2327,
       "observed": 0.2312,
       "error_percent": 0.6,
-      "formula": "(393 - 75√5) / 968"
+      "formula": "(393 - 75√5) / 968",
+      "note": "Derived from golden H₃ projection geometry; lattice-independent"
     }
   },
   "key_references": {
@@ -194,10 +220,20 @@
       "journal": "Phys. Rev. Lett.",
       "relevance": "Lower bound D ≥ 3"
     },
-    "elser_sloane_1987": {
-      "title": "A Highly Symmetric Four-Dimensional Quasicrystal",
-      "journal": "J. Phys. A",
-      "relevance": "E₈ → two 600-cells projection"
+    "koca_2015": {
+      "title": "Quasicrystals from D₆ lattice",
+      "journal": "Acta Cryst. A",
+      "relevance": "D₆ → H₃ golden projection"
+    },
+    "duneau_katz_1985": {
+      "title": "Quasiperiodic Patterns",
+      "journal": "Phys. Rev. Lett. 54, 2688",
+      "relevance": "Embedding dimension theorem for non-crystallographic groups"
+    },
+    "elser_1986": {
+      "title": "The Diffraction Pattern of Projected Structures",
+      "journal": "Acta Cryst. A 42, 36",
+      "relevance": "Cut-and-project formalism"
     }
   },
   "constants": {
@@ -229,10 +265,24 @@
         "Definition: μ(G) ≥ 6 (intrinsic knotting) + C_μ → ∞ (statistical complexity)",
         "Assumptions A2, A3 eliminated — now derived from axiom",
         "D = 3 derivation now fully rigorous (graph theory + Zeeman)",
-        "E₈ selection argument reframed as 'algebraic closure'",
-        "All Part I and Part II files updated with new terminology"
+        "MAJOR PIVOT: D₆ selected over E₈ (minimal sufficiency)",
+        "Delegations 08, 09, 10 confirm D₆ has identical physics predictions",
+        "Part II restructured: 03_e8_selection → 03_lattice_selection (D₆)",
+        "Delegation 11 created for 'Time as Computation' hypothesis"
+      ]
+    },
+    {
+      "date": "2025-11-28",
+      "session": "Review Fixes",
+      "changes": [
+        "AXIOM CLARIFICATION: μ(G) and C_μ are COMPLEMENTARY, not equivalent",
+        "Specified G = connectivity graph of the structure",
+        "LOWER BOUND FIX: μ(G) ≥ 6 guarantees knots EXIST; stability requires D=3",
+        "FILE SYNC: Updated 04_golden_ratio.md for D₆ (was E₈)",
+        "FILE SYNC: Updated claims_summary.md with D₆ pivot and time conjecture",
+        "CITATION: Added Duneau-Katz (1985), Elser (1986) for embedding dimension theorem",
+        "TIME CONJECTURE: Marked as [CONJECTURE] in all relevant files"
       ]
     }
   ]
 }
-
