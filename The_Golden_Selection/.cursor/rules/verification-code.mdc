@@ -1,0 +1,142 @@
+---
+description: Standards for verification code in the Golden Selection framework
+globs: ["**/*.py", "**/Appendices/*.md"]
+alwaysApply: false
+---
+
+# Verification Code Standards
+
+## Purpose
+
+Code in this project serves ONE purpose: **independent verification of mathematical claims**.
+
+Code is NOT for:
+- Exploring/discovering results (that's research)
+- Fitting parameters (that's not derivation)
+- Generating figures (unless for verification)
+
+## Code Requirements
+
+### Self-Contained
+Each script must be runnable independently:
+```python
+#!/usr/bin/env python3
+"""
+Verification: [THEOREM X.Y - Name]
+
+This script verifies that [specific claim].
+
+Expected output: [what success looks like]
+
+Requirements: numpy, [others]
+"""
+
+import numpy as np
+
+# Constants (define explicitly, don't import)
+PHI = (1.0 + np.sqrt(5.0)) / 2.0
+
+# [Code]
+
+if __name__ == "__main__":
+    main()
+```
+
+### Explicit Assertions
+```python
+# ✓ Good: Explicit check with tolerance
+assert np.isclose(ratio, PHI, atol=1e-10), f"Expected φ, got {ratio}"
+
+# ✗ Bad: Silent success
+if ratio == PHI:
+    pass
+```
+
+### Output Format
+```python
+def main():
+    print("=" * 60)
+    print("Verification: THEOREM 3.2 (Two 600-cells)")
+    print("=" * 60)
+    
+    # ... calculations ...
+    
+    print(f"\n✓ Inner shell: {n_inner} roots (expected 120)")
+    print(f"✓ Outer shell: {n_outer} roots (expected 120)")
+    print(f"✓ Radius ratio: {ratio:.10f}")
+    print(f"  Expected φ:   {PHI:.10f}")
+    print(f"  Match: {np.isclose(ratio, PHI)}")
+    
+    print("\n" + "=" * 60)
+    print("All verifications PASSED" if all_pass else "FAILED")
+    print("=" * 60)
+```
+
+## Standard Functions
+
+### E₈ Root Generation
+```python
+def generate_d8_roots():
+    """Generate 112 D₈-type roots: (±1,±1,0⁶) permutations."""
+    roots = []
+    for i in range(8):
+        for j in range(i + 1, 8):
+            for s1 in [+1.0, -1.0]:
+                for s2 in [+1.0, -1.0]:
+                    v = np.zeros(8)
+                    v[i], v[j] = s1, s2
+                    roots.append(v)
+    return roots  # Should be 112
+
+def generate_s8_roots():
+    """Generate 128 S₈-type roots: ½(±1)⁸ with even minus signs."""
+    roots = []
+    for mask in range(256):
+        bits = [(mask >> k) & 1 for k in range(8)]
+        if sum(bits) % 2 == 0:  # even number of minuses
+            v = np.array([0.5 * (1 - 2*b) for b in bits])
+            roots.append(v)
+    return roots  # Should be 128
+```
+
+### Golden Projection
+```python
+def build_golden_projection():
+    """Build the 4×8 golden projection matrix (orthonormalized)."""
+    phi = (1.0 + np.sqrt(5.0)) / 2.0
+    phi_inv = 1.0 / phi
+    
+    # Moxness basis
+    x = np.array([1, phi, 0, -1, phi, 0, 0, 0])
+    y = np.array([phi, 0, 1, phi, 0, -1, 0, 0])
+    z = np.array([0, 1, phi, 0, -1, phi, 0, 0])
+    w = np.array([0, 0, 0, 0, 0, 0, phi**2, phi_inv])
+    
+    M = np.vstack([x, y, z, w])
+    Q, R = np.linalg.qr(M.T)
+    P = Q.T  # 4×8, orthonormal rows
+    
+    # Verify orthonormality
+    assert np.allclose(P @ P.T, np.eye(4), atol=1e-10)
+    return P
+```
+
+## File Organization
+
+```
+Appendices/
+├── D_verification_code.md    # All code with explanations
+├── scripts/
+│   ├── verify_two_600cells.py
+│   ├── verify_height_spectrum.py
+│   ├── verify_weinberg_angle.py
+│   └── verify_koide_triple.py
+```
+
+## Reproducibility
+
+All verification code must:
+1. Use fixed random seeds if any randomness
+2. Print software versions
+3. Include expected output in comments
+4. Run in < 1 minute on standard hardware

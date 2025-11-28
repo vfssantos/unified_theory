@@ -1,0 +1,122 @@
+---
+description: Document structure guidelines for the Golden Selection framework
+globs: ["**/*.md"]
+alwaysApply: true
+---
+
+# Document Structure Guidelines
+
+## Section Numbering
+
+- Part I, II, III... for major divisions
+- XX_ prefix for files (01_, 02_, etc.)
+- X.Y for theorems/derivations within sections
+- Consistent cross-references
+
+## Standard Section Template
+
+```markdown
+# [Number]. [Title]
+
+## Overview
+
+[1-2 paragraph summary of what this section establishes]
+
+### Key Results
+
+- **[THEOREM/DERIVATION X.Y]**: [one-line summary]
+- **[THEOREM/DERIVATION X.Z]**: [one-line summary]
+
+### Prerequisites
+
+This section requires:
+- [Section N]: [what concepts]
+- [Appendix X]: [what details]
+
+---
+
+## X.1 [First Subsection]
+
+[Content]
+
+---
+
+## X.2 [Second Subsection]
+
+[Content]
+
+---
+
+## Summary
+
+| Result | Type | Status |
+|--------|------|--------|
+| [name] | THEOREM | Proven |
+| [name] | DERIVATION | Complete |
+| [name] | CONJECTURE | Open |
+
+## References
+
+- [Internal]: Section Y, Appendix Z
+- [External]: [citations]
+```
+
+## Part Structure
+
+### Part I: Mathematics (Sections 01-05)
+- Pure math, no physics interpretation
+- All claims are THEOREMS
+- Establishes the geometric foundation
+
+### Part II: Postulates (Sections 06-08)
+- The axioms of the theory
+- Clearly separated from derivations
+- Minimal set of assumptions
+
+### Part III-VI: Derived Physics (Sections 09-26)
+- Everything follows from Parts I + II
+- Claims are DERIVATIONS or PREDICTIONS
+- Physical interpretations included
+
+### Part VII-VIII: Dynamics (Sections 27-33)
+- Microscopic theory
+- Emergent phenomena
+- Some CONJECTURES allowed
+
+### Part IX: Assessment (Sections 34-38)
+- Honest evaluation
+- Comparison with alternatives
+- Open problems
+
+## Cross-Reference Format
+
+```markdown
+See [THEOREM 3.2] for the proof.
+As established in [POSTULATE 2.1]...
+From [DERIVATION 5.3], we have...
+Details in [Appendix E.3].
+```
+
+## Figure/Table Conventions
+
+- Figures: Figure X.Y (section.number)
+- Tables: Table X.Y
+- Equations: (X.Y) when numbered
+- Code listings: Listing X.Y
+
+## Status Tracking
+
+Each section should end with status:
+
+```markdown
+## Section Status
+
+| Claim | Status | Notes |
+|-------|--------|-------|
+| THEOREM 3.1 | ✅ Proven | Computational verification in D.1 |
+| THEOREM 3.2 | ✅ Proven | |
+| DERIVATION 3.3 | 🟡 Partial | Step 2 needs work |
+| CONJECTURE 3.4 | ⬜ Open | |
+
+**Overall**: [Complete / In Progress / Stub]
+```

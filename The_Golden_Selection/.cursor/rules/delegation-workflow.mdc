@@ -1,0 +1,249 @@
+---
+description: Workflow for delegating tasks to other LLMs and external tools
+globs:
+alwaysApply: true
+---
+
+# Delegation Workflow
+
+## When to Delegate
+
+This project involves tasks that benefit from parallel processing and specialized tools. **Delegate** to other LLMs or tools when:
+
+### 1. Literature Search
+- Finding papers that prove specific mathematical claims
+- Checking if a result is novel or exists in literature
+- Finding canonical references for standard results
+
+### 2. Numerical Verification
+- Running Python code to verify mathematical claims
+- Computing projections, eigenvalues, etc.
+- Generating root tables or coordinate lists
+
+### 3. Symbolic Computation
+- Verifying algebraic identities
+- Computing Lie algebra structures
+- Checking group theory facts
+
+### 4. Deep Research / Verification
+- Verifying theoretical claims against literature
+- Finding counterexamples to hypotheses
+- Cross-checking derivations independently
+
+## What NOT to Delegate
+
+Keep in this conversation:
+- Overall narrative structure
+- Physical interpretations and postulates
+- Synthesis of multiple results
+- Writing the final document
+- Decision-making about rigor levels
+
+---
+
+## ⚠️ CRITICAL: Self-Contained Prompts
+
+**The research agent has NO ACCESS to any other files in the project.**
+
+Every delegation prompt (`iter_N_prompt.md`) must be **completely self-contained**. The agent should be able to understand and execute the task from the prompt alone.
+
+### Required Sections for Every Prompt
+
+```markdown
+# Deep Research Request: [Topic]
+
+## 1. BACKGROUND: The Golden Selection Theory
+- Full explanation of the axiom
+- The logic chain showing where this fits
+- Why this question matters for the theory
+
+## 2. THE CLAIM TO VERIFY
+- Exact statement of what we're checking
+- The proposed mechanism/argument
+- Current evidence (if any)
+
+## 3. WHAT WE NEED
+- Core questions (numbered, prioritized)
+- What would CONFIRM the claim
+- What would REFUTE the claim
+
+## 4. SPECIFIC RESEARCH TASKS
+- Organized into Parts (A, B, C...)
+- Specific searches with suggested terms
+- Papers to find and verify
+
+## 5. KEY GAPS TO INVESTIGATE
+| Gap | Impact | Priority |
+|-----|--------|----------|
+| ... | ... | CRITICAL/HIGH/MEDIUM |
+
+## 6. DELIVERABLES
+- Literature review
+- Gap analysis (PROVEN/PLAUSIBLE/SPECULATIVE/FALSE)
+- Counterexample search
+- Overall assessment
+
+## 7. RESPONSE FORMAT
+[Structured template with verdict classifications]
+
+## 8. CONTEXT NOTES
+- Request honest assessment, not validation
+- Counterexamples are valuable
+- Mathematical rigor over plausibility
+```
+
+### Prompt Quality Checklist
+
+Before finalizing any prompt, verify:
+
+- [ ] **Theory context**: Does it explain the axiom and where this fits?
+- [ ] **Stakes clear**: Does it explain what breaks if this fails?
+- [ ] **Self-contained**: Can someone with NO project knowledge execute this?
+- [ ] **Specific tasks**: Are search terms and paper titles provided?
+- [ ] **Gap prioritization**: Are CRITICAL questions marked?
+- [ ] **Response format**: Is there a structured template?
+- [ ] **Verdict categories**: Are classification options defined?
+- [ ] **Honest assessment**: Does it ask for critique, not validation?
+
+---
+
+## Delegation Folder Structure
+
+Each major delegation topic gets its own folder in `Appendices/D_delegations/`:
+
+```
+D_delegations/
+├── README.md                     # Overview and status of all delegations
+├── delegation_prompts.md         # Master reference (may be outdated)
+├── 01_weinberg_angle/
+│   ├── index.md                  # Status, summary, log table
+│   ├── iter_1_prompt.md          # Iteration 1: question (SELF-CONTAINED)
+│   ├── iter_1_response.md        # Iteration 1: answer
+│   └── ...
+├── 02_golden_lock/
+│   └── ...
+└── ...
+```
+
+### File Naming Convention
+
+- `iter_N_prompt.md` — What we asked in iteration N (MUST BE SELF-CONTAINED)
+- `iter_N_response.md` — What the research agent returned
+- Each iteration is a complete Q&A pair
+
+### Index File Template
+
+Each folder's `index.md` must contain:
+
+```markdown
+# Delegation XX: [Topic]
+
+## Status: 🔴/🟡/🟢 [NOT STARTED/IN PROGRESS/COMPLETE]
+
+**Goal**: [One sentence]
+**Result**: [Brief outcome when complete]
+
+---
+
+## Summary
+
+| Question | Status | Result |
+|----------|--------|--------|
+| Q1: ... | ✅/⬜ | Brief answer |
+
+---
+
+## Key Gaps
+
+| Gap | Impact | Priority |
+|-----|--------|----------|
+| ... | ... | CRITICAL/HIGH/MEDIUM |
+
+---
+
+## Chronological Log
+
+| # | Date | Type | File | Summary |
+|---|------|------|------|---------|
+| 1 | YYYY-MM | Prompt | `iter_1_prompt.md` | ... |
+| 2 | YYYY-MM | Response | `iter_1_response.md` | ... |
+
+---
+
+## Next Steps
+1. ...
+```
+
+---
+
+## Workflow
+
+### Starting a Delegation
+
+1. Create folder: `D_delegations/XX_topic_name/`
+2. Create `index.md` with status 🟡
+3. Create `iter_1_prompt.md` — **MUST BE SELF-CONTAINED**
+4. Update `D_delegations/README.md` with new delegation
+
+### Receiving a Response
+
+1. Save response as `iter_N_response.md`
+2. Update `index.md`:
+   - Add to chronological log
+   - Update question status table
+   - Update gaps based on findings
+3. If follow-up needed: Create `iter_N+1_prompt.md`
+4. If complete: Mark status 🟢, integrate findings into theory
+
+### Completing a Delegation
+
+1. Mark status 🟢 in `index.md`
+2. Write final summary with key findings
+3. Update relevant theory files with results
+4. Update `D_delegations/README.md`
+
+---
+
+## ⚠️ One Task at a Time
+
+**IMPORTANT**: Focus on ONE delegation task until it is complete (status 🟢).
+
+- Do NOT start a new delegation while one is 🟡 IN PROGRESS
+- Iterate on the current task until all questions are answered
+- Only then move to the next delegation
+
+**Current active delegation**: Check `D_delegations/README.md` for which task is 🟡
+
+---
+
+## Multi-Model Validation
+
+When validating critical claims, use multiple models:
+
+1. **Send to research agent** — Get literature and evidence
+2. **Cross-validate with other LLMs** — Ask 2+ models to critique
+3. **Synthesize in main conversation** — Aggregate findings
+
+### Validation Verdict Categories
+
+Use consistent classifications across all delegations:
+
+| Verdict | Meaning |
+|---------|---------|
+| **PROVEN** | Rigorous mathematical/physical theorem with citation |
+| **PLAUSIBLE** | Supported by evidence but not formally proven |
+| **SPECULATIVE** | Hypothesis without strong support |
+| **FALSE** | Contradicted by evidence or counterexample |
+
+---
+
+## Citation Format
+
+When results come back from delegation, record them as:
+
+```markdown
+> **THEOREM X.Y** [Author Year]: Statement of result.
+>
+> *Reference*: Full bibliographic citation
+> *Status*: PROVEN/PLAUSIBLE/SPECULATIVE
+```

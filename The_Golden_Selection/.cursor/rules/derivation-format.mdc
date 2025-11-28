@@ -1,0 +1,111 @@
+---
+description: Format for rigorous derivations in the Golden Selection framework
+globs: ["**/*.md"]
+alwaysApply: true
+---
+
+# Derivation Format Standards
+
+## Structure of a Rigorous Derivation
+
+Every major derivation should follow this structure:
+
+```markdown
+## X.Y [Name of Result]
+
+### Statement
+
+> **[THEOREM/DERIVATION] X.Y**: [Clear statement of the result]
+
+### Prerequisites
+
+This result requires:
+- [THEOREM A.B]: [brief description]
+- [POSTULATE C.D]: [brief description]
+
+### Derivation
+
+**Step 1: [Description]**
+
+[Mathematical content]
+
+*Justification*: [Why this step is valid]
+
+**Step 2: [Description]**
+
+[Mathematical content]
+
+*Justification*: [Why this step is valid]
+
+...
+
+### Result
+
+$$
+\boxed{\text{Final expression}}
+$$
+
+### Verification
+
+| Predicted | Observed | Error |
+|-----------|----------|-------|
+| [value]   | [value]  | [%]   |
+
+### Discussion
+
+[Physical interpretation, caveats, connections to other results]
+```
+
+## The Weinberg Angle as Template
+
+The Weinberg angle derivation should be the "gold standard" for rigor:
+
+1. **State the claim clearly**: sin²θ_W = (3/8)φ⁻¹
+2. **Identify all inputs**: 
+   - GUT normalization (from SU(5) embedding)
+   - Projection anisotropy (from P_φ geometry)
+3. **Derive each factor separately**:
+   - 3/8 comes from [specific calculation]
+   - φ⁻¹ comes from [specific calculation]
+4. **Combine factors with explicit justification**
+5. **Compare to experiment with uncertainties**
+
+## Avoiding Common Pitfalls
+
+### Don't: Assert without proof
+```markdown
+❌ "The projection ratio is φ because the geometry is golden."
+```
+
+### Do: Derive explicitly
+```markdown
+✓ "The SU(2) generators project to length L₂ = [calculation].
+   The U(1) generator projects to length L₁ = [calculation].
+   Therefore L₁/L₂ = φ."
+```
+
+### Don't: Hide assumptions
+```markdown
+❌ "This gives sin²θ_W = 0.2318."
+```
+
+### Do: State assumptions explicitly
+```markdown
+✓ "Assuming the identification [POSTULATE 2.3], we have sin²θ_W = (3/8)φ⁻¹."
+```
+
+## Cross-Reference Format
+
+When citing other results:
+- Use full reference: [THEOREM 3.2] not just "as shown earlier"
+- Include brief description: [THEOREM 3.2: 600-cell decomposition]
+- For appendix details: "See Appendix E.3 for computational verification"
+
+## Numerical Verification Standard
+
+Every numerical prediction must include:
+1. Formula used
+2. Input values (with sources)
+3. Calculated result
+4. Observed value (with source/uncertainty)
+5. Discrepancy and interpretation

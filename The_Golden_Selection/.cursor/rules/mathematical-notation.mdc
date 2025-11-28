@@ -1,0 +1,80 @@
+---
+description: Mathematical notation conventions for the Golden Selection framework
+globs: ["**/*.md"]
+alwaysApply: true
+---
+
+# Mathematical Notation Conventions
+
+## Core Constants
+
+| Symbol | Definition | Numerical Value |
+|--------|------------|-----------------|
+| φ | Golden ratio (1+√5)/2 | 1.6180339887... |
+| φ⁻¹ | 1/φ = φ-1 | 0.6180339887... |
+| φ² | φ+1 | 2.6180339887... |
+| φ³ | φ²+φ | 4.2360679775... |
+| φ⁻³ | 1/φ³ | 0.2360679775... |
+
+## Key Identities (Use These)
+
+- φ² = φ + 1
+- φ⁻¹ = φ - 1
+- φ + φ⁻¹ = √5
+- φ² + φ⁻² = 3
+- φⁿ = φⁿ⁻¹ + φⁿ⁻²
+
+## Lattice and Root Notation
+
+| Symbol | Meaning |
+|--------|---------|
+| Λ_E₈ | The E₈ lattice |
+| α, β, γ | E₈ roots (vectors in ℝ⁸) |
+| D₈ | Type D₈ roots: (±1,±1,0⁶) permutations |
+| S₈ | Type S₈ roots: ½(±1)⁸ with even minus signs |
+
+## Projection Notation
+
+| Symbol | Meaning |
+|--------|---------|
+| P_φ | Golden projection matrix (8×4) |
+| V_phys | Physical subspace (4D) |
+| V_int | Internal subspace (4D or 5D) |
+| x = P_φ·α | Physical projection of root α |
+| ξ = π_int(α) | Internal projection of root α |
+| h(α) | Height (latitude) of projected root |
+
+## 600-Cell Notation
+
+| Symbol | Meaning |
+|--------|---------|
+| H₄ | The 4D icosahedral group (order 14,400) |
+| H₃ | The 3D icosahedral group (order 120) |
+| R_inner | Radius of inner 600-cell (~0.7435) |
+| R_outer | Radius of outer 600-cell (~1.2030) |
+
+## Height Spectrum (Standard Values)
+
+- h = ±2 : Poles (1 vertex each)
+- h = ±φ : Icosahedral bands (12 vertices each)
+- h = ±1 : Dodecahedral bands (20 vertices each)
+- h = ±φ⁻¹ : Intermediate bands (12 vertices each)
+- h = 0 : Equator (30 vertices)
+
+## Physical Quantities
+
+| Symbol | Meaning |
+|--------|---------|
+| θ_W | Weinberg (weak mixing) angle |
+| sin²θ_W | ~0.231 (observed at M_Z) |
+| θ_C | Cabibbo angle (~13°) |
+| Q | Koide ratio (2/3 for leptons) |
+| θ₀ | Koide phase (~347° for leptons) |
+
+## LaTeX Formatting
+
+- Use $...$ for inline math
+- Use $$...$$ for display math
+- Use \varphi for φ (golden ratio)
+- Use \theta_W for Weinberg angle
+- Use \mathfrak{e}_8 for the E₈ Lie algebra
