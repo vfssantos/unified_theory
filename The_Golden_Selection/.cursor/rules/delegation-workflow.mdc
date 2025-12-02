@@ -47,6 +47,28 @@ Keep in this conversation:
 
 Every delegation prompt (`iter_N_prompt.md`) must be **completely self-contained**. The agent should be able to understand and execute the task from the prompt alone.
 
+### What "Self-Contained" Means
+
+The prompt must include **ALL** of the following without referencing other files:
+
+1. **Full theory background**: Explain the Golden Selection framework from scratch
+2. **All mathematical definitions**: Define every symbol, formula, and constant used
+3. **Experimental data**: Include actual numerical values (not "see file X")
+4. **Prior findings**: Summarize relevant results from previous delegations inline
+5. **Context for the question**: Why this matters, what breaks if it fails
+6. **Complete code**: All Python/verification code should be runnable standalone
+
+### ❌ BAD Examples (References to Other Files)
+- "As shown in Delegation 25..."
+- "Using the results from iter_2_response.md..."
+- "See Part_IV for details..."
+- "The Koide parameter Q = 2/3 (proven earlier)..."
+
+### ✅ GOOD Examples (Self-Contained)
+- "The Koide parameter Q = 2/3 was proven to arise from the A₂ cone condition: [full derivation here]..."
+- "The Brannen phase θ₀ = 2/9 rad reproduces lepton masses exactly: [full numerical verification here]..."
+- "The Golden Selection theory posits that... [full explanation]..."
+
 ### Required Sections for Every Prompt
 
 ```markdown

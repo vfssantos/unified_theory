@@ -1,0 +1,1 @@
+Given that κ_Schur and D_KL(q||p_golden) share the same minimum at φ⁻² and local convex behavior, can we prove they give the SAME gradient flow dynamics (belief updating direction) at all points, even if they differ in magnitude?

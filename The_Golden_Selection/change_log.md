@@ -1,5 +1,69 @@
 # Change Log
 
+## 2025-12-02: Major Restructuring — Parts V–VIII
+
+### Overview
+
+Complete restructuring of the document to address critical gaps identified in theory review.
+
+### Changes Made
+
+**Part IV Completion:**
+- Added `10_higgs.md` — S₄ anomalous shell as Higgs sector [CONJECTURE]
+- Added `11_lagrangian.md` — SM Lagrangian from lattice geometry [OPEN]
+- Added `12_chirality.md` — Parity violation from projection asymmetry [OPEN]
+- Updated `00_overview.md` — New derivation chain including IV.10–12
+
+**New Part V: Spacetime**
+- Created `Part_V_Spacetime/00_overview.md`
+- Addresses the **critical gap**: time emergence, Lorentz invariance, gravity
+- Key proposal: Time = Computation (update counting)
+
+**New Part VI: Quantum Foundations**
+- Created `Part_VI_Quantum/00_overview.md`
+- Addresses measurement problem, entanglement, collapse
+- Marked as [SPECULATIVE] — exploratory, not predictive
+
+**New Part VII: Cosmology**
+- Created `Part_VII_Cosmology/00_overview.md`
+- Addresses Big Bang, inflation, dark matter/energy
+- Key proposals: Quasicrystal nucleation, phason-driven inflation
+
+**New Part VIII: Status**
+- Created `Part_VIII_Status/00_overview.md`
+- Complete honest assessment of theory
+- Prediction scorecard (12 verified)
+- Critical gaps prioritized
+- Falsifiability analysis
+
+**Removed:**
+- Old `Part_V_Beyond/` (stub)
+- Old `Part_VI_Status/` (stub)
+
+### Critical Gaps Identified
+
+| Gap | Priority | Part |
+|-----|----------|------|
+| Time emergence | **CRITICAL** | V.1 |
+| Lorentz invariance | **CRITICAL** | V.3 |
+| Higgs mass derivation | HIGH | IV.10 |
+| Chirality (V-A) | HIGH | IV.12 |
+| Gravity | MEDIUM | V.4 |
+
+### Files Modified
+
+- `Part_IV_Standard_Model/00_overview.md`
+- `Part_IV_Standard_Model/10_higgs.md` (new)
+- `Part_IV_Standard_Model/11_lagrangian.md` (new)
+- `Part_IV_Standard_Model/12_chirality.md` (new)
+- `Part_V_Spacetime/00_overview.md` (new)
+- `Part_VI_Quantum/00_overview.md` (new)
+- `Part_VII_Cosmology/00_overview.md` (new)
+- `Part_VIII_Status/00_overview.md` (new)
+- `00_Overview/README.md` (updated structure)
+
+---
+
 ## 2025-11-28 (Session 3): Review Fixes — Axiom Clarification & File Sync
 
 ### Issues Addressed (from external review)

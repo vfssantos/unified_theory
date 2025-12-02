@@ -4,19 +4,28 @@
 
 ---
 
+## Files in This Directory
+
+| File | Description |
+|------|-------------|
+| `README.md` | This overview |
+| `derivation.md` | Full step-by-step algebraic derivation |
+| `weinberg.py` | Python verification code (no dependencies) |
+
+---
+
 ## Rigorous Result
 
-> **THEOREM III.C.1 (Weinberg Angle from Golden Projection)**:
+> **THEOREM IV.2.1 (Weinberg Angle from Golden Projection)**:
 > 
-> The Elser-Sloane golden projection of E₈, with standard SU(5) embedding of the Standard Model, yields:
+> The D₆ → H₃ golden projection, with standard SU(5) embedding of the Standard Model, yields:
 > 
 > $$\sin^2\theta_W = \frac{393 - 75\sqrt{5}}{968} \approx 0.2327$$
 
 | Value | Source | Error from Experiment |
 |-------|--------|----------------------|
-| **0.2327** | **Geometric prediction** | **0.6%** |
-| 0.2318 | Old heuristic (3/8)φ⁻¹ | 0.3% |
-| 0.2312 | Experimental (PDG 2024) | — |
+| **0.2327** | **Geometric prediction** | **0.66%** |
+| 0.23121 | Experimental (PDG 2024) | — |
 
 ---
 
@@ -29,12 +38,12 @@ $$\sin^2\theta_W^{\text{GUT}} = \frac{3}{8} = 0.375$$
 
 ### Step 2: Golden Projection (✅ Verified)
 
-Using the Elser-Sloane/Moxness projection matrix P_φ and standard SU(5) generators:
+Using the Koca–Al-Siyabi D₆ → H₃ projection matrix and standard SU(5) generators:
 
-**SM Generators in E₈**:
+**SM Generators in D₆**:
 ```python
-su2_root = [0, 0, 0, 1, -1, 0, 0, 0]  # D₈-type
-y_dir = [1/3, 1/3, 1/3, -1/2, -1/2, 0, 0, 0]  # Hypercharge (canonical SU(5))
+W3 = [0, 0, 0, 1, -1, 0]  # SU(2)_L neutral
+Y = [1/3, 1/3, 1/3, -1/2, -1/2, 0]  # Hypercharge (canonical SU(5))
 ```
 
 **Projection lengths**:
@@ -55,17 +64,14 @@ $$\sin^2\theta_W = \frac{1}{1 + \frac{5}{3}\rho} = \frac{393 - 75\sqrt{5}}{968}$
 ## Key Findings
 
 ### 1. The Projection is Canonical
-The Moxness basis = Elser-Sloane projection (verified). Both produce identical 600-cell structures.
+The Koca–Al-Siyabi D₆ → H₃ projection is the unique icosahedral-symmetric projection from 6D.
 
 ### 2. The SM Embedding is Standard
-The hypercharge direction `[1/3, 1/3, 1/3, -1/2, -1/2, 0, 0, 0]` is the canonical SU(5) embedding.
+The hypercharge direction `[1/3, 1/3, 1/3, -1/2, -1/2, 0]` is the canonical SU(5) embedding in D₆.
 
 ### 3. The Result Has Golden Structure
 The exact formula contains √5, confirming the golden-ratio geometry is fundamental:
 $$\sin^2\theta_W = \frac{393 - 75\sqrt{5}}{968}$$
-
-### 4. The Old Formula Was a Heuristic
-The "clean" formula (3/8)φ⁻¹ ≈ 0.2318 was a phenomenological guess that happened to be close. It is now superseded by the rigorous geometric result.
 
 ---
 
@@ -116,8 +122,14 @@ The Golden Slice theory provides a **rigorous first-principles prediction** for 
 
 ## References
 
+- Al-Siyabi, Koca, Koca (2020) "Icosahedral Polyhedra from D₆ Lattice" — *Symmetry* 12, 1983.
 - Georgi & Glashow (1974) "Unity of All Elementary Particle Forces" — SU(5) GUT
-- Slansky (1981) "Group Theory for Unified Model Building" — SM in E₈
-- Elser & Sloane (1987) "Highly Symmetric 4D Quasicrystal" — Projection
+- Slansky (1981) "Group Theory for Unified Model Building" — SM embedding
 - PDG (2024) — Experimental sin²θ_W value
-- See `D_delegations/01_weinberg_angle/` for full derivation history
+
+## Related Files
+
+- `derivation.md` — Full algebraic derivation
+- `weinberg.py` — Standalone verification script
+- `D_delegations/01_weinberg_angle/` — Research history
+- `Part_IV_Standard_Model_v2/02_electroweak.md` — Main theory section

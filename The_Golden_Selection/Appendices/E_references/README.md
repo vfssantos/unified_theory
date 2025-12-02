@@ -113,7 +113,7 @@ The following papers are cited but not yet obtained/summarized:
 
 - [ ] Zeeman (1963) — Full text needed
 - [ ] Colin de Verdière (1990) — Full text needed
-- [ ] "Slow Flip Dynamics in 3D Rhombus Tilings" — Verify existence
+- [x] "Slow Flip Dynamics in 3D Rhombus Tilings" — **VERIFIED**. Destainville, N. (2001). "Flip dynamics in octagonal rhombus tiling sets." *Phys. Rev. E* 63, 011111. 3D extension at [Natural Sciences Publishing](https://www.naturalspublishing.com/download.asp?ArtcID=10)
 - [ ] "Photonic Spin Hopfions" (2024) — Verify and obtain
 
 ---

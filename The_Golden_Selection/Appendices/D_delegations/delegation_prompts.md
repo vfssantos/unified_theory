@@ -23,7 +23,7 @@ sin²θ_W  = 0.2327  (calculated)
 Experiment = 0.2312
 ```
 
-**Agreement**: The calculated value is within 0.4% of (3/8)φ⁻¹ and 0.6% of experiment.
+**Agreement**: The calculated value is within 0.6% of experiment.
 
 ### Existing Code (Partial Verification)
 

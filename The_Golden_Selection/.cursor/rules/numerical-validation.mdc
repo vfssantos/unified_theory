@@ -1,0 +1,121 @@
+---
+description: Guidelines for running numerical validation before delegating to external agents
+globs: ["**/*.md", "**/*.py"]
+alwaysApply: true
+---
+
+# Numerical Validation Before Delegation
+
+## Core Principle
+
+**Always validate numerical claims locally before accepting agent responses.**
+
+External agents (LLMs) can hallucinate or use incorrect formulas. When a delegation returns numerical results, run Python code locally to verify before updating theory files.
+
+## When to Validate Locally
+
+### ALWAYS validate when:
+1. Agent claims a specific numerical result (ratio = X, angle = Y°)
+2. Agent proposes a formula that can be computed
+3. Agent claims a parameter search found a solution
+4. Results seem "too perfect" or suspiciously clean
+
+### Use terminal Python for:
+- Quick calculations (`python3 -c "..."`)
+- Parameter searches
+- Formula verification
+- Cross-checking agent arithmetic
+
+## Validation Pattern
+
+```python
+# 1. State what the agent claimed
+print("Agent claimed: X = Y at parameters (a, b)")
+
+# 2. Implement the formula yourself
+def calculate_X(a, b):
+    # Your independent implementation
+    return result
+
+# 3. Test at the claimed parameters
+result = calculate_X(agent_a, agent_b)
+print(f"Calculated: {result}")
+print(f"Agent claimed: {agent_value}")
+print(f"Match: {abs(result - agent_value) < tolerance}")
+
+# 4. If mismatch, search for correct solution
+for a in range(...):
+    for b in range(...):
+        if abs(calculate_X(a, b) - target) < 0.01:
+            print(f"Found solution: a={a}, b={b}")
+```
+
+## Common Agent Errors to Check
+
+### Formula Errors
+- Using Δm² = T² - T² instead of Δm² = T⁴ - T⁴
+- Confusing radians and degrees
+- Missing factors of 2, π, or √2
+
+### Parameter Errors
+- Claiming solution at wrong (θ, ε) values
+- Confusing which variable is which
+
+### Interpretation Errors
+- Negative values where positivity is required
+- Wrong ordering of mass eigenstates
+
+## Example: Koide Formula Validation
+
+```python
+import math
+
+# Agent claimed: ε = √2 at θ = 42.6° gives ratio 32.6
+eps = math.sqrt(2)
+theta = math.radians(42.6)
+
+# Calculate T values
+T_vals = [1 + eps * math.cos(theta + 2*math.pi*i/3) for i in range(3)]
+
+# Check for negative T (physically invalid)
+if any(t < 0 for t in T_vals):
+    print("ERROR: Negative T values!")
+
+# Calculate ratio with CORRECT formula
+T4 = sorted([t**4 for t in T_vals])
+ratio = (T4[2] - T4[0]) / (T4[1] - T4[0])
+
+print(f"Actual ratio: {ratio:.2f}")  # Will show ~854, not 32.6!
+```
+
+## When to Delegate vs. Compute Locally
+
+### Delegate to external agents:
+- Deep literature research
+- Complex theoretical derivations
+- Cross-checking interpretations
+- Finding counterexamples in literature
+
+### Compute locally:
+- Numerical verification
+- Parameter searches
+- Formula implementation
+- Sanity checks
+
+## Recording Validated Results
+
+When you discover a correction through local validation:
+
+1. **Save the validation code** to `Appendices/B_calculations/`
+2. **Document the error** in the delegation response file
+3. **Record the correct result** with full derivation
+4. **Update theory files** only after validation passes
+
+## Red Flags in Agent Responses
+
+Be suspicious when agent:
+- Claims exact match (ratio = 32.6000000)
+- Uses suspiciously round numbers
+- Doesn't show intermediate calculations
+- Changes formula interpretation mid-response
+- Claims "universal" solutions without edge case checks

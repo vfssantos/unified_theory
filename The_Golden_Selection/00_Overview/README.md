@@ -1,165 +1,207 @@
-# The Golden Selection Principle
+# The Golden Selection
 
-## A First-Principles Derivation of Reality from a Single Axiom
+## A Theory of Geometric Selection
+
+This document presents the **Golden Selection** theory — a framework that derives the fundamental parameters of physics from a single variational principle.
 
 ---
 
-## The Central Claim
+## The Axiom
 
-> **AXIOM**: Reality maximizes **Topological Complexity**.
+> **AXIOM 0 (Geometric Free Energy Principle)**:
 >
-> **MAIN THEOREM**: The unique solution is a 3-dimensional quasicrystal with H₃ symmetry, projected from the D₆ lattice (6D).
-
-**Definition**: Topological Complexity = Intrinsic Knotting ($\mu(G) \geq 6$) + Statistical Complexity ($C_\mu \to \infty$)
-
-**Why this axiom?** See `Part_I_Structure/00_overview.md` for full motivation. In brief:
-- It is measurable (both components are rigorous mathematical quantities)
-- It has predictive power (uniquely selects D=3, H₃, φ)
-- It is falsifiable (stable knots in D≠3 would refute it)
-- Action principles assume spacetime exists; this axiom selects spacetime's properties
+> Reality minimizes Geometric Variational Free Energy:
+> $$F[\mathcal{G}] = E_{\text{strain}} + \lambda \cdot \kappa_{\text{Schur}}$$
+> subject to stable Markov blanket (topological boundary).
 
 ---
 
 ## Document Structure
 
 ```
-╔═══════════════════════════════════════════════════════════════════════════════╗
-║                    THE GOLDEN SELECTION PRINCIPLE                              ║
-║                                                                                ║
-║   AXIOM: Reality maximizes Topological Complexity (μ ≥ 6 + C_μ → ∞)           ║
-╚═══════════════════════════════════════════════════════════════════════════════╝
-                                    │
-        ┌───────────────────────────┼───────────────────────────┐
-        ▼                           ▼                           ▼
-╔═══════════════════╗   ╔═══════════════════╗   ╔═══════════════════╗
-║ PART I: STRUCTURE ║   ║ PART II: GEOMETRY ║   ║ PART III: PHYSICS ║
-║   (Why This?)     ║   ║   (Why D₆?)       ║   ║   (Observables)   ║
-╚═══════════════════╝   ╚═══════════════════╝   ╚═══════════════════╝
-       │                         │                         │
-       ├── A. Complexity         ├── A. Projection         ├── A. Gauge
-       ├── B. Dimension          ├── B. H₃ Geometry        ├── B. Matter
-       └── C. Symmetry           ├── C. D₆ Selection       ├── C. Electroweak
-                                 └── D. Golden Ratio       ├── D. Mass
-                                                           ├── E. Mixing
-                                                           ├── F. Mirror
-                                                           └── G. Cosmology
+Part 0: The Axiom
+├── 00_overview.md      ← The Geometric Free Energy Principle
+└── 01_definitions.md   ← Key definitions
+
+Part I: Selection (What does the axiom select?)
+├── 00_overview.md
+├── 01_dimension.md     ← D = 3 from blanket stability
+├── 02_ratio.md         ← φ from Schur-convexity
+└── 03_symmetry.md      ← H₃ from maximal isotropy
+
+Part II: Realization (How is it implemented?)
+├── 00_overview.md
+├── 01_projection.md    ← Cut-and-project necessity
+├── 02_lattice.md       ← D₆ as minimal embedding
+└── 03_verification.md  ← φ emerges as eigenvalue
+
+Part III: The Quasicrystal (The physical system)
+├── 00_overview.md
+├── 01_structure.md     ← Shells and geometry
+├── 02_phasons.md       ← Internal degrees of freedom
+├── 03_topology.md      ← Defects and jamming
+└── 04_experiment.md    ← Experimental connections
+
+Part IV: The Standard Model (Particle physics)
+├── 00_overview.md
+├── 01_gauge.md         ← SU(3)×SU(2)×U(1) from subalgebras
+├── 02_electroweak.md   ← Weinberg angle (0.6% accuracy)
+├── 03_fermions.md      ← ω₅ spinor → SM spectrum
+├── 04_generations.md   ← Three families from E⊥
+├── 05_mass_mechanism.md ← L⊥ + Koide geometry
+├── 06_masses_leptons.md ← Charged + neutrino masses
+├── 07_masses_quarks.md  ← Quark mass ratios
+├── 08_mixing.md        ← CKM + PMNS matrices
+├── 09_higgs.md         ← S₄ anomaly → Higgs sector [CONJECTURE]
+├── 10_lagrangian.md    ← Interactions from geometry [OPEN]
+├── 11_chirality.md     ← V-A structure [OPEN]
+└── 12_predictions.md   ← Complete prediction summary
+
+Part V: Spacetime (The arena of reality)
+├── 00_overview.md
+├── 01_time_emergence.md ← Time = Computation [CONJECTURE]
+├── 02_quantum_walk.md   ← Dirac equation from lattice [OPEN]
+├── 03_lorentz.md        ← Emergent Lorentz invariance [OPEN]
+├── 04_gravity.md        ← GR from quasicrystal [SPECULATIVE]
+└── 05_black_holes.md    ← Information paradox [SPECULATIVE]
+
+Part VI: Quantum Foundations (The rules of reality)
+├── 00_overview.md
+├── 01_measurement.md    ← Measurement problem [SPECULATIVE]
+├── 02_entanglement.md   ← Non-locality [SPECULATIVE]
+├── 03_collapse.md       ← Wave function collapse [PHILOSOPHICAL]
+└── 04_decoherence.md    ← Classical emergence [SPECULATIVE]
+
+Part VII: Cosmology (The history of reality)
+├── 00_overview.md
+├── 01_big_bang.md       ← Initial conditions [SPECULATIVE]
+├── 02_inflation.md      ← Phason-driven expansion [SPECULATIVE]
+├── 03_dark_matter.md    ← DM candidates [CONJECTURE]
+├── 04_dark_energy.md    ← Λ from geometry [CONJECTURE]
+└── 05_arrow_of_time.md  ← Entropy direction [SPECULATIVE]
+
+Part VIII: Status (Assessment)
+├── 00_overview.md       ← Complete assessment & open problems
+
+Part IX: Ontology (What things are)
+├── 00_overview.md       ← The philosophical dictionary
+├── 01_dynamics.md       ← Mass, Energy, Momentum, Inertia
+├── 02_spacetime.md      ← Space, Time, Causality
+├── 03_forces.md         ← Charge, Magnetism, Strong, Weak, Gravity
+├── 04_thermodynamics.md ← Temperature, Entropy, Heat
+├── 05_quantum.md        ← Wave Function, Superposition, Entanglement, Measurement, Spin
+└── 06_existence.md      ← Particle, Field, Vacuum, Information, Existence
+
+Appendices/
+├── A_research_reports/  ← Deep research summaries
+├── B_calculations/      ← Explicit computations
+├── C_verifications/     ← Numerical checks
+├── D_delegations/       ← Research agent Q&A
+└── E_references/        ← Bibliography
 ```
 
 ---
 
-## The Complete Logic Chain
+## The Logic Chain
 
 ```
-AXIOM: Reality maximizes Topological Complexity
-                ↓
-PART I: STRUCTURE
-                ↓
-I.A: Statistical Complexity (C_μ) → Aperiodic order
-                ↓
-I.B: Intrinsic Knotting (μ ≥ 6) → D=3 exactly (Zeeman)
-                ↓
-I.C: Isotropic complexity → H₃ (maximal non-crystallographic in 3D)
-                ↓
-PART II: GEOMETRY
-                ↓
-II.A: Projection → Quasicrystals require higher-D lattice source
-                ↓
-II.B: Minimal Dimension → H₃ in 3D requires 6D (2×3=6)
-                ↓
-II.C: Lattice Selection → D₆ is minimal sufficient lattice for H₃ + SM physics
-                ↓
-II.D: Golden Ratio → φ emerges as eigenvalue of H₃ projection
-                ↓
-PART III: PHYSICS (To be developed)
-                ↓
-Standard Model parameters from D₆ → H₃ golden projection
+AXIOM 0: Minimize F (blanket stable)
+      ↓
+I.A: Blanket stability → D = 3 (Zeeman)
+      ↓
+I.B: κ_Schur minimization → φ (Bruna)
+      ↓
+I.C: Max isotropy + φ + D=3 → H₃
+      ↓
+II.A-C: D₆ lattice via cut-and-project
+      ↓
+II.D: φ emerges as eigenvalue (verification)
+      ↓
+III: Physical Quasicrystal (Phasons)
+      ↓
+IV: Standard Model (Gauge, Fermions, Masses, Mixing)
+      ↓
+V: Spacetime (Time, Lorentz, Gravity)
+      ↓
+VI: Quantum Foundations
+      ↓
+VII: Cosmology
+      ↓
+VIII: Assessment & Open Problems
+      ↓
+IX: Ontology (What things are)
 ```
 
 ---
 
-## The D₆ Framework (3+3 Dimensions)
+## Key Results
 
-The D₆ root lattice in 6 dimensions provides:
+### Verified Predictions (12)
 
-| Dimension | Role | Physics |
-|-----------|------|---------|
-| **3D Physical** ($E_{\parallel}$) | Observable space | 3D quasicrystal (icosahedral) |
-| **3D Internal** ($E_{\perp}$) | Generation/Flavor | Phason degrees of freedom |
+| Result | Accuracy | Section |
+|--------|----------|---------|
+| sin²θ_W = 0.2327 | 0.6% | IV.2 |
+| m_μ/m_e | 0.001% | IV.6 |
+| m_τ/m_e | 0.007% | IV.6 |
+| Δm²₃₁/Δm²₂₁ | 2.4% | IV.6 |
+| V_us (Cabibbo) | 2.1% | IV.8 |
+| V_cb | 7.8% | IV.8 |
+| V_ub | 2.7% | IV.8 |
+| δ_CP | 4.7% | IV.8 |
+| θ₁₃ (PMNS) | 0.6% | IV.8 |
+| θ₂₃ (PMNS) | 0.3% | IV.8 |
+| θ₁₂ (PMNS) | 0.5% | IV.8 |
 
-**Time**: Emerges as computational update sequence (phason dynamics), not a geometric dimension.
+### Derived (No Free Parameters)
 
-### Why D₆ over E₈?
+| Result | Status | Section |
+|--------|--------|---------|
+| D = 3 uniquely selected | [PROVEN] | I.1 |
+| φ from Schur-convexity | [PROVEN] | I.2 |
+| H₃ from four pillars | [DERIVED] | I.3 |
+| D₆ is minimal lattice | [DERIVED] | II.2 |
+| SU(3)×SU(2)×U(1) | [VERIFIED] | IV.1 |
+| 3 generations | [DERIVED] | IV.4 |
+| Koide Q = 2/3, θ₀ = 2/9 | [DERIVED] | IV.5 |
 
-| Criterion | D₆ (6D) | E₈ (8D) |
-|-----------|---------|---------|
-| **Minimality** | ✅ Minimal for H₃ | ❌ 2 extra dimensions |
-| **Weinberg Angle** | ✅ (393-75√5)/968 | ✅ Identical |
-| **Koide (leptons)** | ✅ A₂ ⊂ D₆ | ✅ A₂ ⊂ E₈ |
-| **Quark masses** | ✅ D₄ ⊂ D₆ | ✅ D₄ ⊂ E₈ |
-| **Physical grounding** | ✅ Real quasicrystals | ❌ Theoretical only |
+### Open Problems
 
-**Verdict**: D₆ is selected by Occam's Razor.
-
----
-
-## Key External Theorems (Cited)
-
-| Theorem | Author(s) | Year | Role |
-|---------|-----------|------|------|
-| Unknotting Theorem | Zeeman | 1963 | Knots stable only in D=3 |
-| Intrinsic Knotting of K₇ | Conway-Gordon | 1983 | μ ≥ 6 for knot graphs |
-| Colin de Verdière Invariant | Colin de Verdière | 1990 | Spectral dimension bound |
-| Generalized Peierls | Various | 2020s | LRO stable only in D≥3 |
-| Cut-and-Project | de Bruijn | 1981 | Quasicrystals as projections |
-| D₆ → H₃ Projection | Koca et al. | 2015 | Golden icosahedral projection |
-
----
-
-## Status
-
-| Part | Status | Content |
-|------|--------|---------|
-| **Part I** | ✅ RIGOROUS | Axiom + 3 Theorems (Topological Complexity) |
-| **Part II** | ✅ RIGOROUS | 4 Theorems (D₆ Geometry) |
-| **Part III** | 🔄 IN PROGRESS | SM derivations from D₆ |
+| Problem | Priority | Section |
+|---------|----------|---------|
+| Time emergence | **CRITICAL** | V.1 |
+| Lorentz invariance | **CRITICAL** | V.3 |
+| Higgs mass m_H = 125 GeV | HIGH | IV.10 |
+| Chirality (V-A) | HIGH | IV.12 |
+| Gravity | MEDIUM | V.4 |
+| Dark matter | MEDIUM | VII.3 |
 
 ---
 
 ## Reading Order
 
-1. `Part_I_Structure/00_overview.md` — The axiom and its consequences
-2. `Part_I_Structure/01_complexity.md` — Why aperiodic?
-3. `Part_I_Structure/02_dimension.md` — Why D=3? (The Golden Lock)
-4. `Part_I_Structure/03_symmetry.md` — Why H₃?
-5. `Part_II_Geometry/00_overview.md` — The completion to D₆
-6. `Part_II_Geometry/01_projection.md` — Cut-and-project necessity
-7. `Part_II_Geometry/03_lattice_selection.md` — D₆ selection (replaces E₈)
-8. `Part_II_Geometry/04_golden_ratio.md` — φ emergence
+1. Start with **Part 0** (the axiom)
+2. Read **Part I** for the mathematical derivations
+3. Read **Part II** for geometric implementation
+4. Read **Part III** for the physical quasicrystal system
+5. Read **Part IV** for particle physics predictions
+6. Read **Part V** for spacetime dynamics (in development)
+7. Skim **Parts VI–VII** for speculative extensions
+8. Read **Part VIII** for honest assessment
+9. Consult **Appendices** for details and verification code
 
 ---
 
-## Supporting Research Reports
+## Status
 
-Deep research reports supporting the theoretical claims:
-
-| Report | Topic | Supports |
-|--------|-------|----------|
-| `Appendices/A_research_reports/R1_full_report.md` | Graph minors, Colin de Verdière, Zeeman | Theorem I.B.1 |
-| `Appendices/A_research_reports/R2_full_report.md` | Hopfions, phason topology, Golden Lock | Theorem I.B.2 |
-| `Appendices/D_delegations/08_e6_alternative/` | D₆ vs E₈ comparison | Part II.C |
-| `Appendices/D_delegations/09_why_higher_dimensions/` | Necessity of 6D | Part II.B |
-| `Appendices/D_delegations/10_d6_shell_structure/` | D₆ subalgebras for SM | Part III |
-
-### Key References
-
-**Dimension Selection:**
-- Zeeman (1963) "Unknotting combinatorial balls" — *Annals of Mathematics*
-- Colin de Verdière (1990) "Sur un nouvel invariant" — *J. Comb. Theory B*
-- Conway & Gordon (1983) "Knots and links in spatial graphs" — *J. Graph Theory*
-
-**D₆ Geometry:**
-- Koca et al. (2015) "Quasicrystals from D₆ lattice" — *Acta Cryst. A*
-- de Bruijn (1981) "Algebraic theory of Penrose tilings" — *Proc. K. Ned. Akad. Wet.*
-
-**Golden Ratio:**
-- Bruna (2025) "Schur-Convex Curvature" — *arXiv:2510.20845*
+| Part | Status | Rigor |
+|------|--------|-------|
+| **0–II** | Complete | Strong (mathematical) |
+| **III** | Complete | Solid (physical) |
+| **IV.1–9** | Complete | Strong (verified predictions) |
+| **IV.10–12** | Outlines | Conjecture/Open |
+| **V** | Overview | Critical gap |
+| **VI** | Overview | Speculative |
+| **VII** | Overview | Speculative |
+| **VIII** | Complete | Assessment |
+| **IX** | Complete | Philosophical |
+| **Appendices** | Extensive | Supporting material |

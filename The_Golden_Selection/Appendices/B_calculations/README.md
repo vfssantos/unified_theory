@@ -37,19 +37,22 @@ B_calculations/
 
 ## 02_projections/
 
-**Purpose**: Implement and verify the Elser-Sloane golden projection
+**Purpose**: Implement and verify the D₆ → H₃ golden projection (Koca–Al-Siyabi)
 
 **Key Calculations**:
-- [ ] Construct the 4×8 projection matrix P_φ
-- [ ] Project all 240 E₈ roots to 4D
-- [ ] Verify two 600-cells emerge (120 + 120 vertices)
-- [ ] Compute radii ratio (should be φ)
-- [ ] Compute height spectrum for vertex-first slicing
+- [x] Construct the 3×6 projection matrix P_{D₆→H₃}
+- [x] Project all 60 D₆ roots to 3D
+- [x] Verify two icosidodecahedra emerge (30 + 30 vertices)
+- [x] Compute radii ratio (verified: φ)
+- [x] Compute Weinberg angle from SM generator projections
+- [x] Verify 120° angle between SU(2) and SU(3) (A₂ geometry)
 
 **Files**:
-- `golden_projection.py` — Projection implementation
-- `600cell_vertices.csv` — Projected coordinates
-- `verification_plots.ipynb` — Visualization notebook
+- `d6_to_h3_projection.py` — Complete implementation with verification
+- `README.md` — Documentation and key results
+
+**Key Result**: D₆ gives **identical** Weinberg angle formula to E₈:
+$$\sin^2\theta_W = \frac{393 - 75\sqrt{5}}{968} \approx 0.2327$$
 
 ---
 
