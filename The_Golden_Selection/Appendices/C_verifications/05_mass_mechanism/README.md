@@ -10,6 +10,8 @@ This directory contains verification materials for the dual mass mechanism (L⊥
 | `theta_derivation.md` | θ₀ = Q/3 = 2/9 identity | ✅ DERIVED |
 | `koide_masses.py` | Numerical verification of mass ratios | ✅ VERIFIED |
 | `L_perp_weighting.md` | Why product weighting is selected | ✅ DERIVED |
+| `lagrangian_structure.md` | ω₅ ↔ ω₃ tensor product + mass Lagrangian | ✅ DERIVED |
+| `spectral_gap_derivation.py` | M₀ = m_N/3.0557 from spectral gap | ✅ DERIVED |
 
 ## Quick Verification
 
@@ -36,3 +38,15 @@ $$\theta_0 = \frac{Q}{3} = \frac{2/3}{3} = \frac{2}{9} \text{ rad}$$
 ### Singularity Proximity
 The electron phase (132.7°) sits only 2.3° from the zero-mass singularity at 135°. This geometric accident creates the 3477× hierarchy naturally.
 
+### Mass Lagrangian Structure
+The ω₃ orbit (160 states) arises from the tensor product:
+$$\omega_5 \otimes \omega_6 = \Lambda^1 \oplus \Lambda^3 \oplus \Lambda^5$$
+
+The mass Lagrangian couples fermions to the vacuum trivector:
+$$\mathcal{L}_{\text{mass}} = g \, \Phi_{ABC} \left( \bar{\Psi} \Gamma^{[ABC]} \Psi \right)$$
+
+See `lagrangian_structure.md` for full derivation.
+
+### Spectral Gap Ratio
+The mass scale M₀ is derived from the D₆/A₂ spectral gap ratio:
+$$M_0 = \frac{m_{\text{nucleon}}}{\lambda(D_6)/\lambda(A_2)} = \frac{m_N}{3.0557} \approx 307.5 \text{ MeV}$$

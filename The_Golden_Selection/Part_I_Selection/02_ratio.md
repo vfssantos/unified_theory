@@ -109,7 +109,7 @@ The icosahedron is constructed from three orthogonal **golden rectangles** (aspe
 
 > *"H₃ is the unique point group that allows the stability of the golden ratio to saturate the entire 3D manifold. A D₁₂ system is only 'half-stable' (in 2D); an H₃ system is 'fully stable' (in 3D)."*
 
-**Source**: Delegations 02 (Golden Lock) and 06 (H₃ Complexity)
+**Source**: Group-theoretic analysis of H₃ axis structure (see I.C for full argument)
 
 ---
 

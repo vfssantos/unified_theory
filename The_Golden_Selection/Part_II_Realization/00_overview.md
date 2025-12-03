@@ -70,7 +70,7 @@ RESULT: D₆ → H₃ projection is the geometric realization
 
 **Original approach**: E₈ (8D) was considered for its "exceptional" status.
 
-**Discovery** (Delegation 08): D₆ and E₈ give **identical** predictions:
+**Key finding**: D₆ and E₈ give **identical** predictions:
 - Same Weinberg angle formula: (393−75√5)/968
 - Same SM subalgebras: A₂, D₄, A₃
 - Same golden ratio structure

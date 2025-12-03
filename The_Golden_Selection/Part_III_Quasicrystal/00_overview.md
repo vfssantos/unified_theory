@@ -56,7 +56,7 @@ The speculative extensions are:
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
-| D₆ projects to 30+30 shells (30 inner, 30 outer icosidodecahedra) | **[VERIFIED]** | Delegation 10, III.1 |
+| D₆ projects to 30+30 shells (30 inner, 30 outer icosidodecahedra) | **[VERIFIED]** | III.1, explicit computation |
 | Radius ratio of shells = φ | **[VERIFIED]** | Computation, III.1 |
 | Phason space is 3D ($E_\perp$) | **[KNOWN]** | Standard QC theory |
 | Phasons measurable in experiments | **[KNOWN]** | Materials science |

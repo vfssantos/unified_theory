@@ -69,7 +69,7 @@ D₆ uses the **minimum dimension** required by Duneau-Katz:
 - 6D is necessary and sufficient for H₃
 - Higher dimensions (e.g., E₈ in 8D) add complexity without new physics
 
-**Note**: E₈ was originally considered but Delegation 08 showed:
+**Note**: E₈ was originally considered, but detailed analysis showed:
 - E₈ and D₆ give **identical** Weinberg angle formula
 - E₈ and D₆ contain the **same** SM subalgebras (A₂, D₄, A₃)
 - D₆ is **minimal** (6D vs 8D)
@@ -112,7 +112,7 @@ E₆ appears **incompatible** with H₃ geometry in the relevant sense:
 
 ## D₆ vs E₈: The Equivalence Result
 
-**Major Finding** (Delegation 08, iter_3):
+**Key Result**:
 
 > D₆ and E₈ give the **exact same** Weinberg angle formula:
 >
@@ -160,7 +160,7 @@ D₆ roots project to **two concentric icosidodecahedra** (30 vertices each):
 
 **Critical ratio**: $r_{out}/r_{in} = \phi$ (Golden Ratio)
 
-**Source**: Delegation 10, explicit computation
+**Source**: Explicit computation (see `Appendices/B_calculations/02_projections/`)
 
 ### Subalgebras (Physics Content)
 
@@ -210,8 +210,8 @@ The Axiom selects D₆ because:
 | D₆ admits H₃ projection | **[KNOWN]** | Koca et al. (2015) |
 | φ is eigenvalue of projection | **[VERIFIED]** | Explicit computation |
 | D₆ contains SM subalgebras | **[KNOWN]** | Lie algebra theory |
-| E₆ incompatible with H₃ | **[PROVEN]** | Delegation 08 |
-| D₆ = E₈ for Weinberg angle | **[VERIFIED]** | Delegation 08 — exact same formula |
+| E₆ incompatible with H₃ | **[PROVEN]** | No H₃ ⊂ W(E₆) embedding |
+| D₆ = E₈ for Weinberg angle | **[VERIFIED]** | Identical algebraic formula |
 | D₆ is minimal dimension | **[DERIVED]** | 6D vs 8D comparison |
 
 ---
@@ -222,7 +222,6 @@ The Axiom selects D₆ because:
 1. **Duneau, M. & Katz, A.** (1985). "Quasiperiodic patterns." *Phys. Rev. Lett.* 54, 2688.
 2. **Koca, M. et al.** (2015, 2020). "Quaternionic representation of D₆ and H₃." *J. Math. Phys.*; "Icosahedral Polyhedra from D₆ Lattice." *MDPI Symmetry*.
 
-### Project Delegations
-3. **Delegation 08**: E₈ vs D₆ Selection — `Appendices/D_delegations/08_e6_alternative/`
-4. **Delegation 10**: D₆ Shell Structure — `Appendices/D_delegations/10_d6_shell_structure/`
+### Verification Code
+3. **D₆ Projection**: `Appendices/B_calculations/02_projections/d6_to_h3_projection.py`
 

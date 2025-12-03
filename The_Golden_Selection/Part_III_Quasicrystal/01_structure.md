@@ -212,6 +212,6 @@ The **ratio φ** between shells may encode the hierarchy between weak and strong
 ## References
 
 1. **Al-Siyabi, Koca, Koca** (2020). "Icosahedral Polyhedra from D₆ Lattice and Danzer's ABCK Tiling." *MDPI Symmetry* 12, 1983.
-2. **Delegation 10**: D₆ Shell Structure — `Appendices/D_delegations/10_d6_shell_structure/`
+2. **Verification**: D₆ projection code — `Appendices/B_calculations/02_projections/`
 3. **Appendix B.2**: Projection code — `Appendices/B_calculations/02_projections/`
 

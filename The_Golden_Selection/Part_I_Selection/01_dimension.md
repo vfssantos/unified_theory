@@ -171,7 +171,7 @@ In Friston's Free Energy Principle:
 | Blanket robustness | Topological jamming |
 | Active inference | Phason flips |
 
-**Status**: Compelling analogy, but FEP literature has not formally developed "topologically knotted Markov blankets." See Delegation 13 for detailed gap analysis.
+**Status**: Compelling analogy, but FEP literature has not formally developed "topologically knotted Markov blankets." This remains an open research direction.
 
 ### Why This Interpretation Matters
 

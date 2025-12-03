@@ -54,7 +54,7 @@ The linear combination is the **simplest non-trivial** variational principle. Hi
 In standard quasicrystal physics, the phason free energy is quadratic in strain:
 $$f_{\text{phason}} = \frac{1}{2} K_{ijkl} w_{ij} w_{kl}$$
 
-This maps directly to "surprisal" in the FEP sense: $-\ln p(\text{config}) \propto \beta F_{\text{config}}$. See Delegation 13 for detailed analysis.
+This maps directly to "surprisal" in the FEP sense: $-\ln p(\text{config}) \propto \beta F_{\text{config}}$.
 
 **3. FEP Accuracy-Complexity Tradeoff** [KNOWN]
 
@@ -136,7 +136,7 @@ In this interpretation:
 
 **Status**: This interpretation is **[HYPOTHESIS]** — a compelling analogy that connects to FEP literature, but the core physics of D=3 selection stands independently via rigorous theorems (see Part I.A).
 
-**Source**: Delegation 13 (FEP Cosmology) — see `Appendices/D_delegations/13_fep_cosmology/`
+**Note**: The FEP connection remains a suggestive analogy. The rigorous content of the theory does not depend on it.
 
 ---
 

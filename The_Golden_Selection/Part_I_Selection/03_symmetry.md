@@ -41,8 +41,6 @@ The information content of a structure is the length of the shortest program to 
 - **Icosahedral QCs**: "Spherical" — dense uniformly in all 3D
 
 > "The axial quasicrystals fail to utilize the z-axis for information storage, creating a density deficit. The icosahedral symmetry utilizes all three dimensions, achieving a global maximum."
->
-> — Delegation 06
 
 ---
 

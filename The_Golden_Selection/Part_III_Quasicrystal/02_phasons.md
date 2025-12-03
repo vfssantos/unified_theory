@@ -299,6 +299,6 @@ This shows that **relativistic-like dispersion can emerge** from quasicrystal dy
 5. **Jay, G., Debbasch, F. & Wang, J.B.** (2018). "Dirac quantum walks on triangular and honeycomb lattices." *arXiv:1803.01304*.
 
 ### Project Sources
-6. **Delegation 10**: D₆ Shell Structure
-7. **Delegation 11**: D₆ Dynamics & Time
+6. **Verification**: Shell structure — `Appendices/B_calculations/02_projections/`
+7. **Verification**: Phason dynamics — `Appendices/B_calculations/06_golden_walk/`
 
