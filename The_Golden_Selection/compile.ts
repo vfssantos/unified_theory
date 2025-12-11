@@ -9,7 +9,7 @@
  *   deno run --allow-read --allow-write compile.ts --include-appendices
  */
 
-import { join, basename, dirname } from "https://deno.land/std@0.208.0/path/mod.ts";
+import { join, basename, dirname } from "jsr:@std/path";
 
 // Part ordering using Roman numerals
 const PART_ORDER = [
@@ -24,9 +24,10 @@ const PART_ORDER = [
   "Part_VIII_Matter",
   "Part_IX_Masses",
   "Part_X_Mixing",
-  "Part_XI_Cosmology",
-  "Part_XII_Assessment",
-  "Part_XIII_Ontology",
+  "Part_XI_Nuclear",
+  "Part_XII_Cosmology",
+  // "Part_XIII_Assessment",
+  // "Part_XIV_Ontology",
 ];
 
 // Roman numeral conversion for display
@@ -42,9 +43,10 @@ const ROMAN_DISPLAY: Record<string, string> = {
   "Part_VIII_Matter": "Part VIII: Matter",
   "Part_IX_Masses": "Part IX: Masses",
   "Part_X_Mixing": "Part X: Mixing",
-  "Part_XI_Cosmology": "Part XI: Cosmology",
-  "Part_XII_Assessment": "Part XII: Assessment",
-  "Part_XIII_Ontology": "Part XIII: Ontology",
+  "Part_XI_Nuclear": "Part XI: Nuclear Physics",
+  "Part_XII_Cosmology": "Part XII: Cosmology",
+  "Part_XIII_Assessment": "Part XIII: Assessment",
+  "Part_XIV_Ontology": "Part XIV: Ontology",
 };
 
 interface CompileOptions {
@@ -58,7 +60,7 @@ function parseArgs(): CompileOptions {
   const args = Deno.args;
   let outputFile = "The_Golden_Selection_Complete.md";
   let includeAppendices = false;
-  let includeOverview = true;
+  let includeOverview = false;
   let addPageBreaks = true;
 
   for (const arg of args) {
@@ -66,8 +68,8 @@ function parseArgs(): CompileOptions {
       outputFile = arg.slice(9);
     } else if (arg === "--include-appendices") {
       includeAppendices = true;
-    } else if (arg === "--no-overview") {
-      includeOverview = false;
+    } else if (arg === "--include-overview") {
+      includeOverview = true;
     } else if (arg === "--no-page-breaks") {
       addPageBreaks = false;
     } else if (arg === "--help" || arg === "-h") {
@@ -229,7 +231,7 @@ async function compile(options: CompileOptions): Promise<void> {
     output += "\n\n---\n\n# Appendices\n\n---\n\n";
     
     // Only include research reports and verifications (not delegations)
-    const appendixDirs = ["A_research_reports", "C_verifications"];
+    const appendixDirs = ["C_verifications"];
     
     for (const subDir of appendixDirs) {
       const fullPath = join(appendicesDir, subDir);

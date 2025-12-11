@@ -104,7 +104,7 @@ Each 30-vertex shell forms an **icosidodecahedron** — an Archimedean solid wit
 
 Using the standard SU(5) embedding of the Standard Model:
 
-| Generator | 6D Vector | Projected |x|² | Shell |
+| Generator | 6D Vector | Projected $\|x\|^2$ | Shell |
 |-----------|-----------|-----------|-------|
 | **SU(2)_L** | $(0,0,0,1,-1,0)$ | $1 + \frac{\sqrt{5}}{5}$ | **Outer** |
 | **SU(3)_c** | $(1,-1,0,0,0,0)$ | $1 - \frac{\sqrt{5}}{5}$ | **Inner** |

@@ -39,6 +39,7 @@ The speculative extensions are:
 | **III.2** | **Phasons** | Internal degrees of freedom ($E_\perp$ as 3D space) |
 | **III.3** | **Topology** | Defects and stability (Hopfions, linked jamming) |
 | **III.4** | **Experiment** | Testable predictions (lab materials + future tests) |
+| **III.5** | **Crystallization** | Phase transition at M_EW, β-function arrest, Scale Paradox resolution |
 
 ---
 
@@ -62,6 +63,9 @@ The speculative extensions are:
 | Phasons measurable in experiments | **[KNOWN]** | Materials science |
 | Phason flips = time/dynamics | **[CONJECTURE]** | Part V |
 | $E_\perp$ directions = generations | **[CONJECTURE]** | Part IV |
+| Vacuum crystallizes at M_EW | **[DERIVED]** | III.5 |
+| β-function → 0 below crystallization | **[DERIVED]** | III.5 |
+| Scale Paradox resolved | **[RESOLVED]** | III.5 |
 
 ### Status Legend
 
@@ -81,6 +85,7 @@ The speculative extensions are:
 3. `02_phasons.md` — Phason physics and internal dimensions **($E_\perp$ as 3D internal space)**
 4. `03_topology.md` — Topological defects and stability **(Hopfions, linked jamming)**
 5. `04_experiment.md` — Experimental predictions **(lab materials + indirect implications)**
+6. `05_crystallization.md` — Vacuum crystallization **(phase transition, β-function arrest, Scale Paradox)**
 
 ---
 
@@ -92,8 +97,9 @@ By the end of Part III, we will have established:
 2. **The phason bridge** — how internal dimensions become physical degrees of freedom
 3. **Topological protection** — why the structure is stable (connecting back to Axiom 0)
 4. **Testable predictions** — things that can be checked in real materials
+5. **The crystallization event** — when and how the quasicrystal formed, and why gauge constants freeze
 
-This sets the stage for Part IV (Standard Model) where we connect this geometry to particle physics.
+This sets the stage for Part IV (Spacetime) where we derive how spacetime emerges from this crystallized structure.
 
 ---
 

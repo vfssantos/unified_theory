@@ -12,7 +12,7 @@
 > |-----------|--------|--------|
 > | **32** | ω₅ spinor count | [THEOREM IV.3.1] |
 > | **sin²θ_W** | Projection anisotropy | [THEOREM IV.2.1] |
-> | **1/√5** | Minkowski embedding Jacobian | [Delegation 50] |
+> | **1/√5** | Minkowski embedding Jacobian | [PROVEN] (see derivation below) |
 >
 > * **Predicted:** $137.044$
 > * **Observed:** $137.036$ (CODATA 2018)
@@ -199,5 +199,3 @@ The Golden Selection provides a complete geometric derivation for:
 2. **[THEOREM IV.2.1]**: Weinberg angle — `Part_VII_Gauge/02_electroweak.md`
 
 3. **[THEOREM IV.3.1]**: Fermion spinors — `Part_VIII_Matter/01_fermions.md`
-
-4. **[Delegation 50]**: Minkowski embedding proof — `Appendices/D_delegations/50_quasicrystal_greens_function/`

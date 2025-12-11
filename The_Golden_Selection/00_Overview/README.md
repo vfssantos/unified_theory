@@ -67,7 +67,8 @@ Part VII: Gauge Sector (The forces)
 ├── 00_overview.md
 ├── 01_structure.md     ← SU(3)×SU(2)×U(1) from D₆ subalgebras
 ├── 02_electroweak.md   ← Weinberg angle (0.67% accuracy)
-└── 03_higgs.md         ← Higgs mass (0.34% accuracy)
+├── 03_higgs.md         ← Higgs mass (0.34% accuracy)
+└── 04_alpha.md         ← Fine structure constant
 
 Part VIII: Matter Sector (The particles)
 ├── 00_overview.md
@@ -90,13 +91,20 @@ Part X: Mixing (Generation transitions)
 EXTENSIONS LAYER
 ================
 
-Part XI: Cosmology (Speculative)
-├── 00_overview.md      ← Inflation, dark energy (underdeveloped)
+Part XI: Nuclear Physics (Bound states)
+├── 00_overview.md      ← Summary and status
+├── 01_geometry.md      ← The cluster C_K and shell structure
+├── 02_hamiltonian.md   ← The 4-term geometric Hamiltonian
+├── 03_magic_numbers.md ← Derivation from spectral gaps
+└── 04_predictions.md   ← Falsifiable tests
 
-Part XII: Assessment (Honest evaluation)
+Part XII: Cosmology (Dark sector)
+├── 00_overview.md      ← Dark matter, Λ, bi-metric gravity
+
+Part XIII: Assessment (Honest evaluation)
 ├── 00_overview.md      ← What's proven/derived/speculative
 
-Part XIII: Ontology (What things are)
+Part XIV: Ontology (What things are)
 ├── 00_overview.md      ← Philosophical dictionary
 └── [multiple files]    ← Dynamics, spacetime, forces, quantum, existence
 
@@ -141,11 +149,15 @@ PARTS VII-X: STANDARD MODEL
 ├── Masses from L⊥ + Koide
 └── Mixing from phason tunneling
       ↓
-PART XI: COSMOLOGY (speculative)
+PART XI: NUCLEAR (bound states)
+└── Magic numbers from graph Laplacian
       ↓
-PART XII: ASSESSMENT (honest evaluation)
+PART XII: COSMOLOGY (dark sector)
+└── Dark matter, Λ from geometry
       ↓
-PART XIII: ONTOLOGY (philosophical)
+PART XIII: ASSESSMENT (honest evaluation)
+      ↓
+PART XIV: ONTOLOGY (philosophical)
 ```
 
 ---
@@ -181,6 +193,7 @@ PART XIII: ONTOLOGY (philosophical)
 | SU(3)×SU(2)×U(1) | [DERIVED] | VII.1 |
 | 3 generations | [DERIVED] | VIII.3 |
 | Koide Q = 2/3, θ₀ = 2/9 | [DERIVED] | IX.2 |
+| Magic numbers 2-50 | [VERIFIED] | XI.3 |
 
 ### Testable Predictions
 
@@ -188,6 +201,8 @@ PART XIII: ONTOLOGY (philosophical)
 |------------|-------|-------------|
 | Σm_ν | 63.3 meV | Euclid, DESI (2025-2030) |
 | Normal hierarchy | YES | Oscillation experiments |
+| Ultralight DM | 10⁻²²—10⁻²³ eV | Galaxy halo cores |
+| Z = 120 magic | Superheavy | Element synthesis |
 
 ---
 
@@ -198,13 +213,13 @@ PART XIII: ONTOLOGY (philosophical)
 2. **Part I** — What it selects (D=3, φ, H₃)
 3. **Part VII** — Weinberg angle derivation
 4. **Part IX** — Koide mass mechanism
-5. **Part XII** — Assessment
+5. **Part XIII** — Assessment
 
 ### Full Path
 1. **Parts 0-III** — Mathematical foundation
 2. **Parts IV-VI** — Emergent physics (spacetime, QM, gravity)
 3. **Parts VII-X** — Standard Model predictions
-4. **Parts XI-XIII** — Extensions and assessment
+4. **Parts XI-XIV** — Extensions and assessment
 
 ---
 
@@ -215,8 +230,9 @@ PART XIII: ONTOLOGY (philosophical)
 | **Foundation** | 0–III | Complete | Strong (mathematical) |
 | **Emergence** | IV–VI | Complete | Strong (derived) |
 | **Standard Model** | VII–X | Complete | Strong (verified) |
-| **Extensions** | XI | Stub | Speculative |
-| **Assessment** | XII–XIII | Complete | Honest evaluation |
+| **Nuclear** | XI | Partial | Model (verified for 2-50) |
+| **Cosmology** | XII | Complete | Derived (dark sector) |
+| **Assessment** | XIII–XIV | Complete | Honest evaluation |
 | **Appendices** | A–E | Extensive | Supporting |
 
 ---
@@ -229,4 +245,7 @@ PART XIII: ONTOLOGY (philosophical)
 | 19+ parameters | Fitted | Landscape | **Derived** |
 | Quantum mechanics | Assumed | Assumed | **Derived** |
 | Gravity | Separate | Unified | **Derived** |
+| Dark matter | Added | Unknown | **Derived** (phason) |
+| Dark energy | Fitted (Λ) | Unknown | **Derived** (Fibonacci) |
+| Magic numbers | Shell model | N/A | **Derived** (H₃ graph) |
 | Testable? | Yes | Difficult | **Yes** (Σm_ν = 63 meV) |

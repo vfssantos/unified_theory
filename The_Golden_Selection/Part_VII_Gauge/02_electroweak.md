@@ -246,7 +246,9 @@ The D₆ → H₃ projection does not exist "at the Planck scale" waiting to run
 
 Standard RG flow assumes continuous scale invariance. Quasicrystals have **discrete scale invariance** (powers of φ³ or φ⁶), which may suppress or modify the β-function. The coupling is effectively "pinned" to the geometric value by the lattice structure.
 
-**Note**: The CSDR interpretation is discussed in detail in `Appendices/C_verifications/10_scale_paradox/`.
+> **Full Derivation**: See **[Part III.5 — Vacuum Crystallization]** for the complete derivation of β-function arrest via CSDR. The key result is that the internal volume $V_{int}$ becomes locked by phason stiffness below $M_{EW}$, causing $\beta(g_4) \to 0$ in the crystalline phase.
+
+**Note**: Additional details in `Appendices/C_verifications/10_scale_paradox/`.
 
 ---
 

@@ -236,7 +236,7 @@ This solves the **"Inverse Problem"** of Causal Set Theory: recovering a manifol
 
 > **THEOREM IV.1.9 (Intensive Phason Stiffness)** [CALCULATED]:
 > The dimensionless intensive stiffness of the D₆ quasicrystal is:
-> $$k \approx 1.21$$
+> $$k \approx 1.206$$
 
 **Definition**: The intensive stiffness $k$ measures how sensitive the quasicrystal is to shifts in the internal space $E_\perp$:
 
@@ -285,7 +285,7 @@ This equation bridges pure geometry (left side) to quantum mechanics (right side
 1. $K \cdot a^2 = q \cdot \hbar$ — Action quantization (Postulate IV.1.10)
 2. $l_P^2 = \hbar G / c^3$ — Planck length definition
 3. $q = 2\pi/\phi^2 \approx 2.40$ — Golden quantum angle (Theorem IV.1.8)
-4. $k \approx 1.21$ — Intensive stiffness (Theorem IV.1.9)
+4. $k \approx 1.206$ — Intensive stiffness (Theorem IV.1.9)
 
 **Step 1**: Define physical stiffness $K$ in terms of $k$
 
@@ -317,7 +317,7 @@ $$l_P^2 = \frac{k \cdot \hbar}{q\hbar/a^2} = \frac{k \cdot a^2}{q}$$
 **Step 5**: Final result
 
 $$l_P = a \cdot \sqrt{\frac{k}{q}}$$
-$$\boxed{\frac{a}{l_P} = \sqrt{\frac{q}{k}} = \sqrt{\frac{2.40}{1.21}} \approx 1.41 \approx \sqrt{2}}$$
+$$\boxed{\frac{a}{l_P} = \sqrt{\frac{q}{k}} = \sqrt{\frac{2.40}{1.206}} \approx 1.41 \approx \sqrt{2}}$$
 
 ---
 
@@ -340,7 +340,7 @@ $$G = \frac{k \cdot c^3}{K}$$
 
 | Quantity | Meaning | Status |
 |----------|---------|--------|
-| $k \approx 1.21$ | Dimensionless stiffness | **Calculated** (geometry) |
+| $k \approx 1.206$ | Dimensionless stiffness | **Calculated** (geometry) |
 | $q \approx 2.40$ | Golden quantum angle | **Derived** (stability) |
 | $K$ | Physical stiffness (SI) | Set by $\hbar$ |
 | $G$ | Newton's constant | **Derived** from $k$, $K$ |
@@ -357,7 +357,7 @@ The physical stiffness $K = q\hbar/a^2$ is enormous because $a \sim l_P \sim 10^
 |----------|--------|--------|
 | $\phi$ (golden ratio) | **DERIVED** | Axiom 0 → κ_Schur minimization |
 | $q = 2\pi/\phi^2$ | **DERIVED** | Stability + Hurwitz Theorem |
-| $k \approx 1.21$ | **CALCULATED** | D₆ geometry (simulation) |
+| $k \approx 1.206$ | **CALCULATED** | D₆ geometry (simulation) |
 | $a/l_P \approx \sqrt{2}$ | **DERIVED** | From $q$, $k$, and Postulate |
 | $G = kc^3/K$ | **DERIVED** | From geometric stiffness |
 | $\hbar$ | **INPUT** | Observed constant |
@@ -372,7 +372,7 @@ Part I.B: κ_Schur minimization → φ
          ↓
 Theorem IV.1.8: Stability + Hurwitz → q = 2π/φ²
          ↓
-Theorem IV.1.9: D₆ simulation → k ≈ 1.21
+Theorem IV.1.9: D₆ simulation → k ≈ 1.206
          ↓
 Postulate IV.1.10: K·a² = q·ℏ  ← (Bridge to quantum mechanics)
          ↓

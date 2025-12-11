@@ -23,6 +23,10 @@ Status tracking for each major claim in the theory. Each subfolder documents:
 | 09 | Quantum emergence | ✅ | High | Topological jamming + Born rule |
 | 10 | Scale paradox (CSDR) | ✅ | High | Projection = EWSB at EW scale |
 | 11 | Chirality from A₂ | ⚠️ | Medium | Numerical support, needs rigor |
+| 12 | Dirac operator (isotropy) | ✅ | High | Transport tensor = 20·I (0.00%) |
+| 13 | **Bi-metric gravity** | ✅ | High | γ = 0 verified, Hassan-Rosen |
+| 14 | **Dark matter = phason** | ✅ | Medium-High | m ~ 10⁻²² eV predicted |
+| 15 | **Λ ~ 10⁻¹²²** | ✅ | High | Fibonacci mismatch |
 
 ---
 
@@ -42,6 +46,7 @@ Status tracking for each major claim in the theory. Each subfolder documents:
 | `09_quantum_emergence/` | QM from topology | `README.md` (jamming + Born) |
 | `10_scale_paradox/` | CSDR resolution | `README.md` (why Z-pole) |
 | `11_chirality/` | V-A structure | `chirality_projection.py` |
+| `07_bimetric_gravity.md` | Bi-metric, DM, Λ | Single file (C.7) |
 
 ---
 
@@ -82,6 +87,13 @@ Status tracking for each major claim in the theory. Each subfolder documents:
 - **QM emergence**: Topological jamming requires quantum tunneling
 - **Born rule**: Derived from Parseval + Axiom 0
 
+### Quantum Gravity & Cosmology (NEW)
+- **Bi-metric gravity**: γ = 0 verified (kinetic decoupling)
+- **Dark matter**: Phason mode with m ~ 10⁻²² eV (ultralight/fuzzy DM)
+- **Cosmological Λ**: Fibonacci mismatch → Λ ~ 1/F_n⁴ ~ 10⁻¹²²
+- **Hulse-Taylor**: Consistent (matter couples only to phonon)
+- **Fifth force**: Absent (E∥/E⊥ geometric decoupling)
+
 ---
 
 ## Cross-References to Main Text
@@ -98,3 +110,6 @@ Status tracking for each major claim in the theory. Each subfolder documents:
 | QM emergence | IV.1, IV.4 | `B_calculations/06_golden_walk/` |
 | Scale paradox | IV.2 | — |
 | Chirality | IV.6 | — |
+| **Bi-metric gravity** | VI.10 | `B_calculations/06_golden_walk/` |
+| **Dark matter** | VI.10, XII | `B_calculations/06_golden_walk/` |
+| **Cosmological Λ** | XII | `B_calculations/06_golden_walk/` |
